@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Лида-Сервис — Лизинг, который работает на ваш бизнес</title>
+<meta name="description" content="ООО «Лида-Сервис» — лизинговая компания в Гродненской области. Финансовый, возвратный и оперативный лизинг автомобилей, спецтехники, оборудования и недвижимости. Ставки от 7,9%, срок до 84 месяцев.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ООО «Лида-Сервис»",
+  "url": "https://lida-servis.by",
+  "logo": "https://lida-servis.by/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ул. Кирова, д. 27, пом. 9",
+    "addressLocality": "г. Лида",
+    "addressRegion": "Гродненская область",
+    "postalCode": "231300",
+    "addressCountry": "BY"
+  },
+  "telephone": "+375154659775",
+  "email": "info@lida-servis.by",
+  "foundingDate": "1997",
+  "description": "Лизинговая компания. Финансовый, возвратный и оперативный лизинг автомобилей, спецтехники, оборудования и недвижимости."
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --primary:#132B4F;
+  --primary-dark:#0d1f3a;
+  --accent:#F7C344;
+  --accent-hover:#e5b235;
+  --bg-light:#F5F7FA;
+  --text:#1a1a1a;
+  --text-light:#6b7280;
+  --white:#ffffff;
+  --border:#e5e7eb;
+  --shadow:0 4px 20px rgba(19,43,79,0.08);
+  --shadow-lg:0 10px 40px rgba(19,43,79,0.12);
+}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'Montserrat',sans-serif;color:var(--text);line-height:1.6;background:var(--white);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+
+/* HEADER */
+.header{position:fixed;top:0;left:0;right:0;background:var(--white);z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,0.05);transition:all .3s}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:80px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-icon{width:44px;height:44px;border-radius:50%;overflow:hidden;flex-shrink:0}
+.logo-icon svg{width:100%;height:100%;display:block}
+.logo-text{display:flex;flex-direction:column}
+.logo-name{font-weight:800;font-size:18px;color:var(--primary);line-height:1.1;letter-spacing:0.5px}
+.logo-sub{font-size:10px;color:var(--text-light);letter-spacing:1.5px;text-transform:uppercase}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{font-size:14px;font-weight:500;color:var(--text);transition:color .2s;position:relative}
+.nav a:hover,.nav a.active{color:var(--primary)}
+.nav a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--accent);transition:width .3s}
+.nav a:hover::after,.nav a.active::after{width:100%}
+.header-phone{display:flex;align-items:center;gap:8px;font-weight:600;color:var(--primary);font-size:15px}
+.header-phone i{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:8px;font-weight:600;font-size:14px;cursor:pointer;border:none;transition:all .25s;font-family:inherit}
+.btn-primary{background:var(--accent);color:var(--primary)}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-2px);box-shadow:0 8px 20px rgba(247,195,68,0.4)}
+.btn-outline{background:transparent;color:var(--primary);border:2px solid var(--primary)}
+.btn-outline:hover{background:var(--primary);color:var(--white)}
+.btn-white{background:var(--white);color:var(--primary)}
+.btn-white:hover{background:var(--bg-light)}
+.btn-lg{padding:16px 32px;font-size:15px}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px}
+.burger span{width:24px;height:2px;background:var(--primary);transition:all .3s}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;padding:120px 0 80px;background:linear-gradient(135deg,rgba(19,43,79,0.85) 0%,rgba(19,43,79,0.6) 100%),url('https://image.qwenlm.ai/public_source/8396489c-a0be-450b-b4d3-9658a693db91/1404f9fcf-0ce4-4a38-98e2-85a6a414143e.png') center/cover no-repeat;color:var(--white);overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(19,43,79,0.9) 0%,rgba(19,43,79,0.3) 60%,transparent 100%)}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center}
+.hero-content h1{font-size:56px;font-weight:900;line-height:1.05;margin-bottom:24px;letter-spacing:-1px}
+.hero-content h1 span{color:var(--accent)}
+.hero-sub{font-size:18px;line-height:1.6;opacity:0.9;margin-bottom:40px;max-width:500px}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:48px}
+.hero-advantages{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.hero-adv-item{display:flex;flex-direction:column;gap:8px}
+.hero-adv-icon{width:48px;height:48px;background:rgba(247,195,68,0.15);border:1px solid rgba(247,195,68,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:20px}
+.hero-adv-text{font-size:13px;font-weight:500;line-height:1.4;opacity:0.95}
+
+/* CALCULATOR */
+.calc-card{background:var(--white);border-radius:16px;padding:32px;color:var(--text);box-shadow:var(--shadow-lg)}
+.calc-title{font-size:22px;font-weight:700;color:var(--primary);margin-bottom:24px}
+.calc-field{margin-bottom:20px}
+.calc-label{display:block;font-size:13px;font-weight:600;color:var(--text-light);margin-bottom:8px}
+.calc-select,.calc-input{width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:14px;font-weight:500;color:var(--text);background:var(--white);transition:border-color .2s}
+.calc-select:focus,.calc-input:focus{outline:none;border-color:var(--primary)}
+.slider-wrap{position:relative;padding:8px 0}
+.slider{width:100%;-webkit-appearance:none;height:6px;background:var(--border);border-radius:3px;outline:none}
+.slider::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;background:var(--primary);border-radius:50%;cursor:pointer;border:3px solid var(--white);box-shadow:0 2px 6px rgba(0,0,0,0.2)}
+.slider::-moz-range-thumb{width:20px;height:20px;background:var(--primary);border-radius:50%;cursor:pointer;border:3px solid var(--white);box-shadow:0 2px 6px rgba(0,0,0,0.2)}
+.slider-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.slider-value{font-weight:700;color:var(--primary);font-size:15px}
+.calc-result{background:var(--bg-light);border-radius:12px;padding:20px;margin:24px 0;text-align:center}
+.calc-result-label{font-size:13px;color:var(--text-light);margin-bottom:8px}
+.calc-result-value{font-size:32px;font-weight:800;color:var(--primary);line-height:1}
+.calc-result-value span{font-size:18px;font-weight:600}
+.calc-btn{width:100%;padding:16px;font-size:15px}
+
+/* SECTIONS */
+.section{padding:100px 0}
+.section-light{background:var(--bg-light)}
+.section-dark{background:var(--primary);color:var(--white)}
+.section-header{text-align:center;margin-bottom:60px}
+.section-title{font-size:40px;font-weight:800;color:var(--primary);margin-bottom:16px;line-height:1.2}
+.section-dark .section-title{color:var(--white)}
+.section-subtitle{font-size:16px;color:var(--text-light);max-width:700px;margin:0 auto}
+.section-dark .section-subtitle{color:rgba(255,255,255,0.7)}
+.section-line{width:60px;height:4px;background:var(--accent);margin:20px auto 0;border-radius:2px}
+
+/* LEASING TYPES */
+.types-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.type-card{background:var(--white);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:all .3s;cursor:pointer}
+.type-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
+.type-img{height:200px;overflow:hidden;position:relative}
+.type-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.type-card:hover .type-img img{transform:scale(1.08)}
+.type-icon{position:absolute;bottom:-24px;left:24px;width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--white);box-shadow:0 4px 12px rgba(0,0,0,0.15)}
+.type-icon.blue{background:#3b82f6}
+.type-icon.orange{background:#f59e0b}
+.type-icon.green{background:#10b981}
+.type-icon.purple{background:#8b5cf6}
+.type-body{padding:40px 24px 24px}
+.type-title{font-size:18px;font-weight:700;color:var(--primary);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px}
+.type-desc{font-size:14px;color:var(--text-light);line-height:1.6;margin-bottom:16px}
+.type-link{font-size:14px;font-weight:600;color:var(--primary);display:inline-flex;align-items:center;gap:6px;transition:gap .2s}
+.type-link:hover{gap:12px;color:var(--accent)}
+
+/* ADVANTAGES */
+.adv-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px}
+.adv-item{text-align:center;padding:32px 20px;background:rgba(255,255,255,0.05);border-radius:16px;border:1px solid rgba(255,255,255,0.1);transition:all .3s}
+.adv-item:hover{background:rgba(255,255,255,0.1);transform:translateY(-4px)}
+.adv-icon{width:64px;height:64px;margin:0 auto 20px;background:var(--accent);border-radius:16px;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:28px}
+.adv-title{font-size:16px;font-weight:700;margin-bottom:8px}
+.adv-desc{font-size:13px;opacity:0.7;line-height:1.5}
+
+/* STEPS */
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;position:relative}
+.steps-grid::before{content:'';position:absolute;top:40px;left:15%;right:15%;height:2px;background:linear-gradient(to right,var(--accent),var(--primary));z-index:0}
+.step-card{background:var(--white);border-radius:16px;padding:40px 32px;text-align:center;position:relative;z-index:1;box-shadow:var(--shadow);transition:all .3s}
+.step-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.step-num{width:64px;height:64px;margin:0 auto 24px;background:var(--primary);color:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800}
+.step-icon{font-size:40px;color:var(--primary);margin-bottom:16px}
+.step-title{font-size:18px;font-weight:700;color:var(--primary);margin-bottom:12px}
+.step-desc{font-size:14px;color:var(--text-light);line-height:1.6}
+
+/* CONDITIONS */
+.cond-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.cond-card{background:var(--white);border-radius:16px;padding:32px 24px;text-align:center;box-shadow:var(--shadow);border-top:4px solid var(--accent)}
+.cond-value{font-size:42px;font-weight:800;color:var(--primary);line-height:1;margin-bottom:8px}
+.cond-value span{font-size:20px;font-weight:600}
+.cond-label{font-size:14px;color:var(--text-light);font-weight:500}
+
+/* DOCS */
+.docs-tabs{display:flex;gap:12px;margin-bottom:32px;flex-wrap:wrap;justify-content:center}
+.doc-tab{padding:12px 24px;border-radius:8px;background:var(--white);border:2px solid var(--border);font-weight:600;font-size:14px;cursor:pointer;transition:all .2s;font-family:inherit}
+.doc-tab.active,.doc-tab:hover{background:var(--primary);color:var(--white);border-color:var(--primary)}
+.doc-list{background:var(--white);border-radius:16px;padding:32px;box-shadow:var(--shadow)}
+.doc-item{display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)}
+.doc-item:last-child{border-bottom:none}
+.doc-check{width:28px;height:28px;min-width:28px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:14px;font-weight:700}
+.doc-text{font-size:15px;line-height:1.6}
+
+/* FAQ */
+.faq-list{max-width:900px;margin:0 auto}
+.faq-item{background:var(--white);border-radius:12px;margin-bottom:12px;box-shadow:var(--shadow);overflow:hidden}
+.faq-q{padding:20px 24px;font-weight:600;font-size:16px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--primary);transition:background .2s}
+.faq-q:hover{background:var(--bg-light)}
+.faq-q i{transition:transform .3s;color:var(--accent)}
+.faq-item.open .faq-q i{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s,padding .3s}
+.faq-item.open .faq-a{max-height:500px;padding:0 24px 20px}
+.faq-a p{font-size:14px;color:var(--text-light);line-height:1.7}
+.faq-a ul{list-style:none;padding:0;margin:8px 0}
+.faq-a li{position:relative;padding-left:20px;margin-bottom:6px;font-size:14px;color:var(--text-light);line-height:1.6}
+.faq-a li::before{content:'';position:absolute;left:0;top:8px;width:8px;height:8px;background:var(--accent);border-radius:50%}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-text h2{font-size:36px;font-weight:800;color:var(--primary);margin-bottom:24px;line-height:1.2}
+.about-text p{font-size:15px;color:var(--text-light);margin-bottom:16px;line-height:1.7}
+.about-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:32px}
+.about-stat{background:var(--bg-light);border-radius:12px;padding:24px;text-align:center}
+.about-stat-value{font-size:36px;font-weight:800;color:var(--primary);margin-bottom:4px}
+.about-stat-label{font-size:13px;color:var(--text-light)}
+.about-img{border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);background:var(--bg-light);display:flex;align-items:center;justify-content:center}
+.about-img img{width:100%;height:auto;max-height:500px;object-fit:contain}
+
+/* PARTNERS */
+.partners-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;max-width:800px;margin:0 auto}
+.partner-card{background:var(--white);border-radius:16px;padding:40px 32px;text-align:center;box-shadow:var(--shadow);transition:all .3s;cursor:pointer;display:block}
+.partner-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.partner-icon{width:80px;height:80px;margin:0 auto 20px;background:var(--bg-light);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:32px;transition:background .3s}
+.partner-card:hover .partner-icon{background:var(--accent)}
+.partner-name{font-size:18px;font-weight:700;color:var(--primary);margin-bottom:8px}
+.partner-desc{font-size:14px;color:var(--text-light)}
+.partner-link{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13px;font-weight:600;color:var(--primary);transition:color .2s}
+.partner-link:hover{color:var(--accent)}
+
+/* CONTACTS */
+.contacts-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.contact-info{display:flex;flex-direction:column;gap:24px}
+.contact-item{display:flex;gap:20px;align-items:flex-start}
+.contact-icon{width:56px;height:56px;min-width:56px;background:var(--primary);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:22px}
+.contact-label{font-size:13px;color:var(--text-light);margin-bottom:4px}
+.contact-value{font-size:16px;font-weight:600;color:var(--primary)}
+.contact-value a{color:var(--primary);transition:color .2s}
+.contact-value a:hover{color:var(--accent)}
+.map-wrap{border-radius:16px;overflow:hidden;box-shadow:var(--shadow);height:100%;min-height:400px;background:var(--bg-light);position:relative}
+.map-wrap iframe{width:100%;height:100%;border:0;min-height:400px}
+
+/* FORM */
+.form-card{background:var(--white);border-radius:16px;padding:40px;box-shadow:var(--shadow-lg);max-width:600px;margin:0 auto}
+.form-title{font-size:24px;font-weight:700;color:var(--primary);margin-bottom:8px;text-align:center}
+.form-subtitle{font-size:14px;color:var(--text-light);text-align:center;margin-bottom:32px}
+.form-group{margin-bottom:20px}
+.form-label{display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:8px}
+.form-input,.form-textarea,.form-select{width:100%;padding:14px 16px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:14px;transition:border-color .2s}
+.form-input:focus,.form-textarea:focus,.form-select:focus{outline:none;border-color:var(--primary)}
+.form-textarea{resize:vertical;min-height:100px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-check{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text-light)}
+.form-check input{margin-top:3px}
+.form-success{display:none;text-align:center;padding:40px 20px}
+.form-success i{font-size:64px;color:#10b981;margin-bottom:16px}
+.form-success h3{font-size:22px;font-weight:700;color:var(--primary);margin-bottom:8px}
+.form-success p{color:var(--text-light)}
+
+/* CTA */
+.cta-section{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);padding:80px 0;color:var(--white);position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;top:-50%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(247,195,68,0.15) 0%,transparent 70%);border-radius:50%}
+.cta-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.cta-content h2{font-size:36px;font-weight:800;margin-bottom:16px;line-height:1.2}
+.cta-content p{font-size:16px;opacity:0.85;margin-bottom:32px;line-height:1.6}
+.cta-img{border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);background:var(--white);display:flex;align-items:center;justify-content:center}
+.cta-img img{width:100%;height:auto;max-height:450px;object-fit:contain}
+
+/* FOOTER */
+.footer{background:var(--primary-dark);color:var(--white);padding:60px 0 24px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-logo{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.footer-about{font-size:13px;opacity:0.7;line-height:1.6;margin-bottom:20px}
+.footer-title{font-size:14px;font-weight:700;margin-bottom:20px;color:var(--accent);text-transform:uppercase;letter-spacing:1px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:12px}
+.footer-links a{font-size:14px;opacity:0.7;transition:all .2s}
+.footer-links a:hover{opacity:1;color:var(--accent);padding-left:4px}
+.footer-contact{font-size:14px;opacity:0.8;margin-bottom:12px;display:flex;gap:10px;align-items:flex-start}
+.footer-contact i{color:var(--accent);margin-top:3px;min-width:16px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-copy{font-size:13px;opacity:0.6}
+.footer-social{display:flex;gap:12px}
+.footer-social a{width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.footer-social a:hover{background:var(--accent);color:var(--primary)}
+.footer-disclosure-item{padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.08)}
+.footer-disclosure-item:last-child{border-bottom:none}
+.footer-disclosure-item a{font-size:13px;opacity:0.7;transition:all .2s;display:flex;align-items:center;gap:8px}
+.footer-disclosure-item a:hover{opacity:1;color:var(--accent);padding-left:4px}
+.footer-disclosure-item a i{font-size:11px;color:var(--accent)}
+
+/* MOBILE NAV */
+.mobile-nav{position:fixed;top:80px;left:0;right:0;background:var(--white);padding:24px;box-shadow:var(--shadow-lg);transform:translateY(-120%);transition:transform .3s;z-index:999}
+.mobile-nav.open{transform:translateY(0)}
+.mobile-nav a{display:block;padding:14px 0;font-size:16px;font-weight:500;border-bottom:1px solid var(--border)}
+.mobile-nav a:last-child{border-bottom:none}
+
+/* SCROLL TOP */
+.scroll-top{position:fixed;bottom:30px;right:30px;width:48px;height:48px;background:var(--primary);color:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s;z-index:100;border:none;font-size:18px;box-shadow:var(--shadow-lg)}
+.scroll-top.visible{opacity:1;visibility:visible}
+.scroll-top:hover{background:var(--accent);color:var(--primary);transform:translateY(-4px)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .hero-content h1{font-size:42px}
+  .hero-advantages{grid-template-columns:repeat(2,1fr)}
+  .types-grid{grid-template-columns:repeat(2,1fr)}
+  .adv-grid{grid-template-columns:repeat(3,1fr)}
+  .cond-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid,.contacts-grid,.cta-inner{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .steps-grid{grid-template-columns:1fr}
+  .steps-grid::before{display:none}
+}
+@media(max-width:768px){
+  .nav,.header-phone,.btn{display:none}
+  .burger{display:flex}
+  .hero{padding:100px 0 60px}
+  .hero-content h1{font-size:32px}
+  .section{padding:60px 0}
+  .section-title{font-size:28px}
+  .types-grid,.adv-grid,.cond-grid,.footer-grid{grid-template-columns:1fr}
+  .hero-advantages{grid-template-columns:1fr 1fr}
+  .form-row{grid-template-columns:1fr}
+  .about-stats{grid-template-columns:1fr}
+  .partners-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#home" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#2dd4a8"/>
+              <stop offset="50%" stop-color="#10b981"/>
+              <stop offset="100%" stop-color="#065f46"/>
+            </linearGradient>
+            <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#3b82f6"/>
+              <stop offset="50%" stop-color="#1e40af"/>
+              <stop offset="100%" stop-color="#0c1e5e"/>
+            </linearGradient>
+            <radialGradient id="silverGrad" cx="50%" cy="30%" r="70%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="50%" stop-color="#d1d5db"/>
+              <stop offset="100%" stop-color="#6b7280"/>
+            </radialGradient>
+          </defs>
+          <circle cx="50" cy="50" r="48" fill="url(#silverGrad)"/>
+          <circle cx="50" cy="50" r="45" fill="#111827"/>
+          <path d="M 50 5 A 45 45 0 0 0 50 95 A 22.5 22.5 0 0 1 50 50 A 22.5 22.5 0 0 0 50 5 Z" fill="url(#greenGrad)"/>
+          <path d="M 50 5 A 45 45 0 0 1 50 95 A 22.5 22.5 0 0 0 50 50 A 22.5 22.5 0 0 1 50 5 Z" fill="url(#blueGrad)"/>
+          <ellipse cx="35" cy="30" rx="15" ry="8" fill="rgba(255,255,255,0.25)" transform="rotate(-30 35 30)"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">ЛИДА-СЕРВИС</span>
+        <span class="logo-sub">лизинговая компания</span>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="#about">О компании</a>
+      <a href="#types">Виды лизинга</a>
+      <a href="#conditions">Условия сделки</a>
+      <a href="#docs">Документы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a href="tel:+375154659775" class="header-phone"><i class="fas fa-phone"></i>8 (0154) 65-97-75</a>
+    <a href="#form" class="btn btn-primary">Оставить заявку</a>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#about">О компании</a>
+    <a href="#types">Виды лизинга</a>
+    <a href="#conditions">Условия сделки</a>
+    <a href="#docs">Документы</a>
+    <a href="#contacts">Контакты</a>
+    <a href="#form" class="btn btn-primary" style="margin-top:16px;width:100%">Оставить заявку</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <h1>ЛИЗИНГ,<br>который <span>работает</span><br>на ваш бизнес</h1>
+      <p class="hero-sub">Финансовый, возвратный и оперативный лизинг автомобилей, спецтехники, оборудования и недвижимости. Работаем с 1997 года.</p>
+      <div class="hero-cta">
+        <a href="#calculator" class="btn btn-primary btn-lg">Рассчитать лизинг</a>
+        <a href="#form" class="btn btn-white btn-lg">Оставить заявку</a>
+      </div>
+      <div class="hero-advantages">
+        <div class="hero-adv-item">
+          <div class="hero-adv-icon"><i class="fas fa-calendar-check"></i></div>
+          <div class="hero-adv-text">Работаем<br>с 1997 года</div>
+        </div>
+        <div class="hero-adv-item">
+          <div class="hero-adv-icon"><i class="fas fa-user-tie"></i></div>
+          <div class="hero-adv-text">Индивидуальный<br>подход к клиенту</div>
+        </div>
+        <div class="hero-adv-item">
+          <div class="hero-adv-icon"><i class="fas fa-file-contract"></i></div>
+          <div class="hero-adv-text">Простые и<br>понятные условия</div>
+        </div>
+        <div class="hero-adv-item">
+          <div class="hero-adv-icon"><i class="fas fa-headset"></i></div>
+          <div class="hero-adv-text">Сопровождение<br>на всех этапах</div>
+        </div>
+      </div>
+    </div>
+    <div class="calc-card" id="calculator">
+      <h3 class="calc-title">Онлайн-расчёт лизинга</h3>
+      <div class="calc-field">
+        <label class="calc-label">Выберите вид имущества</label>
+        <select class="calc-select" id="calcType">
+          <option value="auto">Автомобили</option>
+          <option value="truck">Грузовые автомобили</option>
+          <option value="special">Спецтехника</option>
+          <option value="equipment">Оборудование</option>
+          <option value="realty">Недвижимость</option>
+        </select>
+      </div>
+      <div class="calc-field">
+        <label class="calc-label">Стоимость имущества, BYN</label>
+        <input type="number" class="calc-input" id="calcPrice" value="100000" min="10000" max="10000000" step="1000">
+      </div>
+      <div class="calc-field">
+        <div class="slider-header">
+          <label class="calc-label" style="margin:0">Аванс</label>
+          <span class="slider-value" id="advValue">20%</span>
+        </div>
+        <div class="slider-wrap">
+          <input type="range" class="slider" id="calcAdv" min="20" max="40" value="20" step="1">
+        </div>
+      </div>
+      <div class="calc-field">
+        <div class="slider-header">
+          <label class="calc-label" style="margin:0">Срок лизинга</label>
+          <span class="slider-value" id="termValue">36 мес.</span>
+        </div>
+        <div class="slider-wrap">
+          <input type="range" class="slider" id="calcTerm" min="12" max="84" value="36" step="6">
+        </div>
+      </div>
+      <div class="calc-result">
+        <div class="calc-result-label">Ежемесячный платёж</div>
+        <div class="calc-result-value" id="calcPayment">2 225 <span>BYN</span></div>
+      </div>
+      <button class="btn btn-primary calc-btn" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'})">Отправить заявку</button>
+    </div>
+  </div>
+</section>
+
+<!-- TYPES -->
+<section class="section" id="types">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Виды лизинга</h2>
+      <p class="section-subtitle">Предлагаем лизинг широкого спектра имущества для развития и модернизации вашего бизнеса</p>
+      <div class="section-line"></div>
+    </div>
+    <div class="types-grid">
+      <div class="type-card">
+        <div class="type-img">
+          <img src="https://image.qwenlm.ai/public_source/8396489c-a0be-450b-b4d3-9658a693db91/1404f9fcf-0ce4-4a38-98e2-85a6a414143e.png" alt="Автотранспорт">
+          <div class="type-icon blue"><i class="fas fa-truck"></i></div>
+        </div>
+        <div class="type-body">
+          <h3 class="type-title">Автотранспорт</h3>
+          <p class="type-desc">Лизинг легковых и грузовых автомобилей, микроавтобусов, прицепов и полуприцепов для бизнеса.</p>
+          <a href="#conditions" class="type-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="type-card">
+        <div class="type-img">
+          <img src="https://image.qwenlm.ai/public_source/8396489c-a0be-450b-b4d3-9658a693db91/1800975b3-2264-4f39-8d4b-3ec78c805678.png" alt="Спецтехника">
+          <div class="type-icon orange"><i class="fas fa-hard-hat"></i></div>
+        </div>
+        <div class="type-body">
+          <h3 class="type-title">Спецтехника</h3>
+          <p class="type-desc">Строительная, дорожная, коммунальная и сельскохозяйственная техника от ведущих производителей.</p>
+          <a href="#conditions" class="type-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="type-card">
+        <div class="type-img">
+          <img src="https://image.qwenlm.ai/public_source/8396489c-a0be-450b-b4d3-9658a693db91/1a9578a6d-e502-4c69-bac4-7c9bf607b78f.png" alt="Оборудование">
+          <div class="type-icon green"><i class="fas fa-cogs"></i></div>
+        </div>
+        <div class="type-body">
+          <h3 class="type-title">Оборудование</h3>
+          <p class="type-desc">Производственное, торговое и медицинское оборудование для развития и модернизации бизнеса.</p>
+          <a href="#conditions" class="type-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="type-card">
+        <div class="type-img">
+          <img src="https://image.qwenlm.ai/public_source/8396489c-a0be-450b-b4d3-9658a693db91/19712eb6d-7f35-44f6-94ed-9d6ac950a0fb.png" alt="Недвижимость">
+          <div class="type-icon purple"><i class="fas fa-building"></i></div>
+        </div>
+        <div class="type-body">
+          <h3 class="type-title">Недвижимость</h3>
+          <p class="type-desc">Коммерческая недвижимость: офисы, склады, торговые и производственные площади на выгодных условиях.</p>
+          <a href="#conditions" class="type-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVANTAGES -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Почему выбирают «Лида-Сервис»</h2>
+      <p class="section-subtitle">Более 28 лет мы помогаем бизнесу расти, предоставляя надёжные лизинговые решения</p>
+      <div class="section-line"></div>
+    </div>
+    <div class="adv-grid">
+      <div class="adv-item">
+        <div class="adv-icon"><i class="fas fa-award"></i></div>
+        <div class="adv-title">Опыт работы</div>
+        <div class="adv-desc">С 1997 года на рынке лизинговых услуг Республики Беларусь</div>
+      </div>
+      <div class="adv-item">
+        <div class="adv-icon"><i class="fas fa-shield-alt"></i></div>
+        <div class="adv-title">Надёжность</div>
+        <div class="adv-desc">Финансовая устойчивость и прозрачность всех операций</div>
+      </div>
+      <div class="adv-item">
+        <div class="adv-icon"><i class="fas fa-user-tie"></i></div>
+        <div class="adv-title">Индивидуальный подход</div>
+        <div class="adv-desc">Гибкие условия под задачи каждого клиента</div>
+      </div>
+      <div class="adv-item">
+        <div class="adv-icon"><i class="fas fa-clock"></i></div>
+        <div class="adv-title">Оперативность</div>
+        <div class="adv-desc">Быстрое рассмотрение заявок и оформление сделок</div>
+      </div>
+      <div class="adv-item">
+        <div class="adv-icon"><i class="fas fa-handshake"></i></div>
+        <div class="adv-title">Сопровождение</div>
+        <div class="adv-desc">Поддержка на всех этапах лизинговой сделки</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="section section-light">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Как получить имущество в лизинг</h2>
+      <p class="section-subtitle">Простой и понятный процесс от заявки до получения имущества</p>
+      <div class="section-line"></div>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-icon"><i class="fas fa-file-alt"></i></div>
+        <h3 class="step-title">Вы оставляете заявку</h3>
+        <p class="step-desc">Мы консультируем вас и подбираем оптимальное решение под ваши задачи и бюджет</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-icon"><i class="fas fa-search-dollar"></i></div>
+        <h3 class="step-title">Рассматриваем заявку</h3>
+        <p class="step-desc">Анализируем документы, согласовываем условия сделки и подписываем договор</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-icon"><i class="fas fa-key"></i></div>
+        <h3 class="step-title">Вы получаете имущество</h3>
+        <p class="step-desc">Передаём имущество и помогаем развивать ваш бизнес на выгодных условиях</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONDITIONS -->
+<section class="section" id="conditions">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Базовые условия лизинговой сделки</h2>
+      <p class="section-subtitle">Прозрачные финансовые параметры для вашего планирования</p>
+      <div class="section-line"></div>
+    </div>
+    <div class="cond-grid">
+      <div class="cond-card">
+        <div class="cond-value">12–84 <span>мес.</span></div>
+        <div class="cond-label">Срок лизинга</div>
+      </div>
+      <div class="cond-card">
+        <div class="cond-value">60–80<span>%</span></div>
+        <div class="cond-label">Финансирование сделки</div>
+      </div>
+      <div class="cond-card">
+        <div class="cond-value">20–40<span>%</span></div>
+        <div class="cond-label">Размер аванса</div>
+      </div>
+      <div class="cond-card">
+        <div class="cond-value">7,9–21<span>%</span></div>
+        <div class="cond-label">Ставка удорожания в год</div>
+      </div>
+    </div>
+    <div style="margin-top:60px;background:var(--bg-light);border-radius:16px;padding:40px">
+      <h3 style="font-size:22px;font-weight:700;color:var(--primary);margin-bottom:24px;text-align:center">Требования к лизингополучателю</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+        <div style="display:flex;gap:12px;align-items:flex-start"><i class="fas fa-check-circle" style="color:var(--accent);font-size:20px;margin-top:2px"></i><div><strong style="color:var(--primary)">Юридические лица</strong><p style="font-size:14px;color:var(--text-light);margin-top:4px">Регистрация в РБ, срок деятельности от 12 месяцев, положительная финансовая отчётность</p></div></div>
+        <div style="display:flex;gap:12px;align-items:flex-start"><i class="fas fa-check-circle" style="color:var(--accent);font-size:20px;margin-top:2px"></i><div><strong style="color:var(--primary)">Индивидуальные предприниматели</strong><p style="font-size:14px;color:var(--text-light);margin-top:4px">Действующая регистрация, подтверждённый доход, отсутствие просроченной задолженности</p></div></div>
+        <div style="display:flex;gap:12px;align-items:flex-start"><i class="fas fa-check-circle" style="color:var(--accent);font-size:20px;margin-top:2px"></i><div><strong style="color:var(--primary)">Физические лица</strong><p style="font-size:14px;color:var(--text-light);margin-top:4px">Гражданство РБ, возраст от 21 года, подтверждённый источник дохода</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCS & FAQ -->
+<section class="section section-light" id="docs">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Документы и FAQ</h2>
+      <p class="section-subtitle">Всё необходимое для оформления лизинговой сделки</p>
+      <div class="section-line"></div>
+    </div>
+    <div class="docs-tabs">
+      <button class="doc-tab active" data-tab="legal">Юридические лица</button>
+      <button class="doc-tab" data-tab="ip">Индивидуальные предприниматели</button>
+      <button class="doc-tab" data-tab="phys">Физические лица</button>
+    </div>
+    <div class="doc-list" id="docList">
+      <!-- заполняется JS -->
+    </div>
+    <div style="margin-top:60px">
+      <h3 style="font-size:24px;font-weight:700;color:var(--primary);text-align:center;margin-bottom:32px">Часто задаваемые вопросы</h3>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">Что такое лизинг и чем он отличается от кредита? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a"><p>Лизинг — это форма финансирования, при которой лизинговая компания приобретает имущество и передаёт его клиенту во временное пользование с правом выкупа. В отличие от кредита, лизинг позволяет получить налоговые преимущества, не требует залога (имущество является предметом лизинга) и часто оформляется быстрее.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Какие преимущества имеет лизинг перед кредитом? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a">
+            <p>Лизинг обладает рядом существенных преимуществ по сравнению с банковским кредитованием:</p>
+            <ul>
+              <li><strong>Налоговые льготы</strong> — лизинговые платежи полностью относятся на расходы организации, что снижает налогооблагаемую базу по налогу на прибыль и НДС</li>
+              <li><strong>Отсутствие залога</strong> — предмет лизинга сам является обеспечением сделки, не требуется дополнительное имущество в залог</li>
+              <li><strong>Быстрое оформление</strong> — решение по заявке принимается в течение 1–3 рабочих дней, что значительно быстрее банковского кредитования</li>
+              <li><strong>Гибкие условия</strong> — индивидуальный график платежей, возможность досрочного выкупа, изменение сроков и размера аванса</li>
+              <li><strong>Сохранение оборотных средств</strong> — не требуется единовременная крупная оплата, что позволяет направить средства на развитие бизнеса</li>
+              <li><strong>Обновление техники</strong> — возможность регулярно обновлять парк автомобилей и оборудования без значительных капитальных вложений</li>
+              <li><strong>Минимальный аванс</strong> — от 20% стоимости имущества, тогда как по кредиту часто требуется 30–50%</li>
+              <li><strong>Не увеличивает долговую нагрузку</strong> — при оперативном лизинге имущество не отражается на балансе лизингополучателя</li>
+              <li><strong>Сервисное обслуживание</strong> — возможность включить страхование, ТО и ремонт в лизинговые платежи</li>
+              <li><strong>Доступность для малого бизнеса</strong> — упрощённые требования к заёмщику по сравнению с банковским кредитом</li>
+            </ul>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Какие виды лизинга вы предлагаете? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a"><p>Мы предлагаем финансовый лизинг (с полным выкупом имущества по окончании срока), оперативный лизинг (с возможностью возврата имущества) и возвратный лизинг (клиент продаёт своё имущество лизинговой компании и берёт его в аренду).</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Можно ли взять в лизинг б/у технику? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a"><p>Да, мы рассматриваем лизинг подержанной техники и оборудования. Условия зависят от возраста, состояния и ликвидности имущества. Свяжитесь с нами для индивидуального расчёта.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Как быстро рассматривается заявка? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a"><p>Предварительное решение по заявке принимается в течение 1–3 рабочих дней после получения полного пакета документов. Окончательное оформление сделки занимает от 5 до 10 рабочих дней.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">В какой валюте осуществляется финансирование? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a"><p>Финансирование осуществляется в белорусских рублях (BYN). Мы также работаем с партнёрскими банками, что позволяет предлагать конкурентные условия.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>О компании «Лида-Сервис»</h2>
+        <p>ООО «Лида-Сервис» — одна из ведущих лизинговых компаний Гродненской области, успешно работающая на рынке с 1997 года. За более чем 28 лет мы помогли сотням предприятий и предпринимателей приобрести необходимое имущество для развития бизнеса.</p>
+        <p>Мы предлагаем гибкие условия лизинга, индивидуальный подход к каждому клиенту и профессиональное сопровождение сделки на всех этапах. Наши партнёры — крупнейшие банки Республики Беларусь, что гарантирует надёжность и прозрачность всех операций.</p>
+        <p>Наша миссия — сделать лизинг доступным и понятным инструментом финансирования для бизнеса любого масштаба.</p>
+        <div class="about-stats">
+          <div class="about-stat">
+            <div class="about-stat-value">28+</div>
+            <div class="about-stat-label">лет на рынке</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-value">500+</div>
+            <div class="about-stat-label">реализованных сделок</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-value">7,9%</div>
+            <div class="about-stat-label">минимальная ставка</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-value">84</div>
+            <div class="about-stat-label">месяца максимальный срок</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-img">
+        <img src="https://image.qwenlm.ai/public_source/eaaf2eb9-3a3d-4a96-b824-f8fe105953e7/1a70bdf90-cfa3-4451-aef2-0a95b726050c.png" alt="Партнёрство">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="section section-light">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Наши партнёры</h2>
+      <p class="section-subtitle">Сотрудничаем с ведущими банками Республики Беларусь</p>
+      <div class="section-line"></div>
+    </div>
+    <div class="partners-grid">
+      <a href="https://www.belgazprombank.by/" target="_blank" rel="noopener" class="partner-card">
+        <div class="partner-icon"><i class="fas fa-university"></i></div>
+        <div class="partner-name">ОАО «Белгазпромбанк»</div>
+        <div class="partner-desc">Один из крупнейших банков страны, надёжный партнёр в финансировании лизинговых сделок</div>
+        <div class="partner-link">Перейти на сайт банка <i class="fas fa-external-link-alt"></i></div>
+      </a>
+      <a href="https://www.belveb.by/" target="_blank" rel="noopener" class="partner-card">
+        <div class="partner-icon"><i class="fas fa-landmark"></i></div>
+        <div class="partner-name">ОАО «Банк БелВЭБ»</div>
+        <div class="partner-desc">Ведущий банк с государственным участием, специализирующийся на поддержке бизнеса</div>
+        <div class="partner-link">Перейти на сайт банка <i class="fas fa-external-link-alt"></i></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container cta-inner">
+    <div class="cta-content">
+      <h2>Готовы развивать ваш бизнес?</h2>
+      <p>Оставьте заявку прямо сейчас, и наши специалисты свяжутся с вами для консультации и расчёта условий лизинга под ваши задачи.</p>
+      <a href="#form" class="btn btn-primary btn-lg">Оставить заявку</a>
+    </div>
+    <div class="cta-img">
+      <img src="https://image.qwenlm.ai/public_source/eaaf2eb9-3a3d-4a96-b824-f8fe105953e7/1a70bdf90-cfa3-4451-aef2-0a95b726050c.png" alt="Партнёрство">
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="section" id="form">
+  <div class="container">
+    <div class="form-card">
+      <div id="formContent">
+        <h3 class="form-title">Оставить заявку</h3>
+        <p class="form-subtitle">Заполните форму, и мы свяжемся с вами в течение рабочего дня</p>
+        <form id="leadForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">ФИО *</label>
+              <input type="text" class="form-input" required placeholder="Иванов Иван Иванович">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Телефон *</label>
+              <input type="tel" class="form-input" required placeholder="+375 (__) ___-__-__">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">E-mail</label>
+            <input type="email" class="form-input" placeholder="example@mail.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Вид имущества</label>
+            <select class="form-select">
+              <option>Автомобили</option>
+              <option>Грузовые автомобили</option>
+              <option>Спецтехника</option>
+              <option>Оборудование</option>
+              <option>Недвижимость</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Сообщение</label>
+            <textarea class="form-textarea" placeholder="Опишите ваши потребности..."></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-check"><input type="checkbox" required> Я согласен на обработку персональных данных в соответствии с политикой конфиденциальности</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Отправить заявку</button>
+        </form>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <i class="fas fa-check-circle"></i>
+        <h3>Заявка отправлена!</h3>
+        <p>Наш специалист свяжется с вами в ближайшее время</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTS -->
+<section class="section section-light" id="contacts">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Контакты</h2>
+      <p class="section-subtitle">Свяжитесь с нами любым удобным способом</p>
+      <div class="section-line"></div>
+    </div>
+    <div class="contacts-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <div class="contact-label">Адрес офиса</div>
+            <div class="contact-value">231300, Гродненская обл.,<br>г. Лида, ул. Кирова, д. 27, пом. 9</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <div class="contact-label">Городские телефоны</div>
+            <div class="contact-value">
+              <a href="tel:+375154659775">8 (0154) 65-97-75</a><br>
+              <a href="tel:+375154659774">8 (0154) 65-97-74</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-mobile-alt"></i></div>
+          <div>
+            <div class="contact-label">Мобильные телефоны</div>
+            <div class="contact-value">
+              <a href="tel:+375291301979">8 (029) 130-19-79</a><br>
+              <a href="tel:+375296444680">8 (029) 644-46-80</a><br>
+              <a href="tel:+375296755032">8 (029) 675-50-32</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="contact-label">E-mail</div>
+            <div class="contact-value"><a href="mailto:info@lida-servis.by">info@lida-servis.by</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-clock"></i></div>
+          <div>
+            <div class="contact-label">Режим работы</div>
+            <div class="contact-value">Пн–Пт: 8:30 – 17:30<br>Сб, Вс: выходной<br>Обед: 13:00 – 13:30</div>
+          </div>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe src="https://yandex.ru/map-widget/v1/?text=Лида+ул+Кирова+27&z=17&l=map" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="logo-icon" style="width:40px;height:40px">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="greenGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#2dd4a8"/>
+                  <stop offset="50%" stop-color="#10b981"/>
+                  <stop offset="100%" stop-color="#065f46"/>
+                </linearGradient>
+                <linearGradient id="blueGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#3b82f6"/>
+                  <stop offset="50%" stop-color="#1e40af"/>
+                  <stop offset="100%" stop-color="#0c1e5e"/>
+                </linearGradient>
+                <radialGradient id="silverGrad2" cx="50%" cy="30%" r="70%">
+                  <stop offset="0%" stop-color="#ffffff"/>
+                  <stop offset="50%" stop-color="#d1d5db"/>
+                  <stop offset="100%" stop-color="#6b7280"/>
+                </radialGradient>
+              </defs>
+              <circle cx="50" cy="50" r="48" fill="url(#silverGrad2)"/>
+              <circle cx="50" cy="50" r="45" fill="#111827"/>
+              <path d="M 50 5 A 45 45 0 0 0 50 95 A 22.5 22.5 0 0 1 50 50 A 22.5 22.5 0 0 0 50 5 Z" fill="url(#greenGrad2)"/>
+              <path d="M 50 5 A 45 45 0 0 1 50 95 A 22.5 22.5 0 0 0 50 50 A 22.5 22.5 0 0 1 50 5 Z" fill="url(#blueGrad2)"/>
+              <ellipse cx="35" cy="30" rx="15" ry="8" fill="rgba(255,255,255,0.25)" transform="rotate(-30 35 30)"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name" style="color:#fff">ЛИДА-СЕРВИС</span>
+            <span class="logo-sub">лизинговая компания</span>
+          </div>
+        </div>
+        <p class="footer-about">Мы помогаем бизнесу расти с 1997 года, предоставляя надёжные лизинговые решения для вашего успеха.</p>
+        <a href="#form" class="btn btn-primary" style="padding:10px 20px;font-size:13px">Оставить заявку</a>
+      </div>
+      <div>
+        <div class="footer-title">Разделы</div>
+        <ul class="footer-links">
+          <li><a href="#about">О компании</a></li>
+          <li><a href="#types">Виды лизинга</a></li>
+          <li><a href="#conditions">Условия сделки</a></li>
+          <li><a href="#docs">Документы</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">Контакты</div>
+        <div class="footer-contact"><i class="fas fa-map-marker-alt"></i><span>231300, Гродненская обл., г. Лида, ул. Кирова, д. 27, пом. 9</span></div>
+        <div class="footer-contact"><i class="fas fa-phone"></i><a href="tel:+375154659775">8 (0154) 65-97-75</a></div>
+        <div class="footer-contact"><i class="fas fa-phone"></i><a href="tel:+375154659774">8 (0154) 65-97-74</a></div>
+        <div class="footer-contact"><i class="fas fa-mobile-alt"></i><a href="tel:+375291301979">8 (029) 130-19-79</a></div>
+        <div class="footer-contact"><i class="fas fa-envelope"></i><a href="mailto:info@lida-servis.by">info@lida-servis.by</a></div>
+      </div>
+      <div>
+        <div class="footer-title">Раскрытие информации</div>
+        <div class="footer-disclosure-item"><a href="#"><i class="fas fa-file-pdf"></i> Устав ООО «Лида-Сервис»</a></div>
+        <div class="footer-disclosure-item"><a href="#"><i class="fas fa-file-pdf"></i> Бухгалтерский баланс за 2025 год</a></div>
+        <div class="footer-disclosure-item"><a href="#"><i class="fas fa-file-pdf"></i> Бухгалтерский баланс за 2024 год</a></div>
+        <div class="footer-disclosure-item"><a href="#"><i class="fas fa-file-pdf"></i> Свидетельство о государственной регистрации</a></div>
+        <div class="footer-disclosure-item"><a href="#"><i class="fas fa-file-pdf"></i> Лицензия на лизинговую деятельность</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 1997–2026 ООО «Лида-Сервис». Все права защищены.</div>
+      <div class="footer-social">
+        <a href="#" aria-label="VK"><i class="fab fa-vk"></i></a>
+        <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:info@lida-servis.by" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Наверх"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+// Calculator
+const calcPrice=document.getElementById('calcPrice');
+const calcAdv=document.getElementById('calcAdv');
+const calcTerm=document.getElementById('calcTerm');
+const advValue=document.getElementById('advValue');
+const termValue=document.getElementById('termValue');
+const calcPayment=document.getElementById('calcPayment');
+
+function formatNumber(n){return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,' ')}
+
+function calculate(){
+  const price=parseFloat(calcPrice.value)||0;
+  const adv=parseInt(calcAdv.value);
+  const term=parseInt(calcTerm.value);
+  advValue.textContent=adv+'%';
+  termValue.textContent=term+' мес.';
+  const loanAmount=price*(1-adv/100);
+  const annualRate=0.12;
+  const monthlyRate=annualRate/12;
+  let payment;
+  if(monthlyRate===0){payment=loanAmount/term}
+  else{payment=loanAmount*(monthlyRate*Math.pow(1+monthlyRate,term))/(Math.pow(1+monthlyRate,term)-1)}
+  calcPayment.innerHTML=formatNumber(Math.round(payment))+' <span>BYN</span>';
+}
+
+calcPrice.addEventListener('input',calculate);
+calcAdv.addEventListener('input',calculate);
+calcTerm.addEventListener('input',calculate);
+calculate();
+
+// Docs tabs
+const docs={
+  legal:['Уставные документы (копия)','Свидетельство о государственной регистрации','Свидетельство о постановке на учёт в налоговом органе','Бухгалтерская отчётность за последний отчётный период','Финансовая отчётность за последние 12 месяцев','Документы, подтверждающие полномочия руководителя','Карточка предприятия с банковскими реквизитами','Бизнес-план или обоснование необходимости приобретения имущества','Документы на приобретаемое имущество (коммерческое предложение, счёт)'],
+  ip:['Паспорт индивидуального предпринимателя','Свидетельство о государственной регистрации ИП','Свидетельство о постановке на учёт в налоговом органе','Налоговая декларация за последний отчётный период','Выписка из банка о движении средств по счетам за 6 месяцев','Документы, подтверждающие доходы','Карточка предприятия с банковскими реквизитами','Документы на приобретаемое имущество'],
+  phys:['Паспорт гражданина Республики Беларусь','Справка о доходах по форме 1-НДФЛ или справка с места работы','Копия трудовой книжки, заверенная работодателем','Документы, подтверждающие наличие первоначального взноса','Документы на приобретаемое имущество']
+};
+
+function renderDocs(type){
+  const list=document.getElementById('docList');
+  list.innerHTML=docs[type].map((d,i)=>`<div class="doc-item"><div class="doc-check">${i+1}</div><div class="doc-text">${d}</div></div>`).join('');
+}
+renderDocs('legal');
+
+document.querySelectorAll('.doc-tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    document.querySelectorAll('.doc-tab').forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    renderDocs(tab.dataset.tab);
+  });
+});
+
+// FAQ
+document.querySelectorAll('.faq-item').forEach(item=>{
+  item.querySelector('.faq-q').addEventListener('click',()=>{
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!wasOpen)item.classList.add('open');
+  });
+});
+
+// Form
+document.getElementById('leadForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  document.getElementById('formContent').style.display='none';
+  document.getElementById('formSuccess').style.display='block';
+});
+
+// Burger
+const burger=document.getElementById('burger');
+const mobileNav=document.getElementById('mobileNav');
+burger.addEventListener('click',()=>{
+  mobileNav.classList.toggle('open');
+});
+mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileNav.classList.remove('open')));
+
+// Scroll top
+const scrollTopBtn=document.getElementById('scrollTop');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY>400)scrollTopBtn.classList.add('visible');
+  else scrollTopBtn.classList.remove('visible');
+});
+scrollTopBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+// Header shadow on scroll
+const header=document.getElementById('header');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY>20)header.style.boxShadow='0 2px 20px rgba(0,0,0,0.1)';
+  else header.style.boxShadow='0 2px 10px rgba(0,0,0,0.05)';
+});
+
+// Active nav link
+const sections=document.querySelectorAll('section[id]');
+const navLinks=document.querySelectorAll('.nav a');
+window.addEventListener('scroll',()=>{
+  let current='';
+  sections.forEach(section=>{
+    const top=section.offsetTop-100;
+    if(window.scrollY>=top)current=section.getAttribute('id');
+  });
+  navLinks.forEach(link=>{
+    link.classList.remove('active');
+    if(link.getAttribute('href')==='#'+current)link.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
