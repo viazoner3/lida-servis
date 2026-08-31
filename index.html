@@ -112,14 +112,11 @@ a{text-decoration:none;color:inherit}
 .calc-btn{width:100%;padding:16px;font-size:15px}
 
 /* SECTIONS */
-.section{padding:100px 0}
+.section{padding:100px 0;background:var(--white)}
 .section-light{background:var(--bg-light)}
-.section-dark{background:var(--primary);color:var(--white)}
 .section-header{text-align:center;margin-bottom:60px}
 .section-title{font-size:40px;font-weight:800;color:var(--primary);margin-bottom:16px;line-height:1.2}
-.section-dark .section-title{color:var(--white)}
 .section-subtitle{font-size:16px;color:var(--text-light);max-width:700px;margin:0 auto}
-.section-dark .section-subtitle{color:rgba(255,255,255,0.7)}
 .section-line{width:60px;height:4px;background:var(--accent);margin:20px auto 0;border-radius:2px}
 
 /* LEASING TYPES */
@@ -142,16 +139,16 @@ a{text-decoration:none;color:inherit}
 
 /* ADVANTAGES */
 .adv-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px}
-.adv-item{text-align:center;padding:32px 20px;background:rgba(255,255,255,0.05);border-radius:16px;border:1px solid rgba(255,255,255,0.1);transition:all .3s}
-.adv-item:hover{background:rgba(255,255,255,0.1);transform:translateY(-4px)}
+.adv-item{text-align:center;padding:32px 20px;background:var(--white);border-radius:16px;border:1px solid var(--border);box-shadow:var(--shadow);transition:all .3s}
+.adv-item:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--accent)}
 .adv-icon{width:64px;height:64px;margin:0 auto 20px;background:var(--accent);border-radius:16px;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:28px}
-.adv-title{font-size:16px;font-weight:700;margin-bottom:8px}
-.adv-desc{font-size:13px;opacity:0.7;line-height:1.5}
+.adv-title{font-size:16px;font-weight:700;color:var(--primary);margin-bottom:8px}
+.adv-desc{font-size:13px;color:var(--text-light);line-height:1.5}
 
 /* STEPS */
 .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;position:relative}
 .steps-grid::before{content:'';position:absolute;top:40px;left:15%;right:15%;height:2px;background:linear-gradient(to right,var(--accent),var(--primary));z-index:0}
-.step-card{background:var(--white);border-radius:16px;padding:40px 32px;text-align:center;position:relative;z-index:1;box-shadow:var(--shadow);transition:all .3s}
+.step-card{background:var(--white);border-radius:16px;padding:40px 32px;text-align:center;position:relative;z-index:1;box-shadow:var(--shadow);transition:all .3s;border:1px solid var(--border)}
 .step-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
 .step-num{width:64px;height:64px;margin:0 auto 24px;background:var(--primary);color:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800}
 .step-icon{font-size:40px;color:var(--primary);margin-bottom:16px}
@@ -202,8 +199,8 @@ a{text-decoration:none;color:inherit}
 
 /* PARTNERS */
 .partners-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;max-width:800px;margin:0 auto}
-.partner-card{background:var(--white);border-radius:16px;padding:40px 32px;text-align:center;box-shadow:var(--shadow);transition:all .3s;cursor:pointer;display:block}
-.partner-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.partner-card{background:var(--white);border-radius:16px;padding:40px 32px;text-align:center;box-shadow:var(--shadow);transition:all .3s;cursor:pointer;display:block;border:1px solid var(--border)}
+.partner-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--accent)}
 .partner-icon{width:80px;height:80px;margin:0 auto 20px;background:var(--bg-light);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:32px;transition:background .3s}
 .partner-card:hover .partner-icon{background:var(--accent)}
 .partner-name{font-size:18px;font-weight:700;color:var(--primary);margin-bottom:8px}
@@ -213,8 +210,8 @@ a{text-decoration:none;color:inherit}
 
 /* CLIENTS */
 .clients-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px}
-.client-card{background:var(--white);border-radius:12px;padding:24px 16px;text-align:center;box-shadow:var(--shadow);transition:all .3s;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:140px}
-.client-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.client-card{background:var(--white);border-radius:12px;padding:24px 16px;text-align:center;box-shadow:var(--shadow);transition:all .3s;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:140px;border:1px solid var(--border)}
+.client-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--accent)}
 .client-logo{width:90px;height:90px;margin:0 auto 12px;background:var(--white);border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:all .3s;border:1px solid var(--border)}
 .client-card:hover .client-logo{border-color:var(--accent);transform:scale(1.05)}
 .client-logo img{width:80%;height:80%;object-fit:contain}
@@ -229,7 +226,7 @@ a{text-decoration:none;color:inherit}
 .contact-value{font-size:16px;font-weight:600;color:var(--primary)}
 .contact-value a{color:var(--primary);transition:color .2s}
 .contact-value a:hover{color:var(--accent)}
-.contact-manager{display:flex;align-items:center;gap:20px;background:var(--white);border-radius:16px;padding:20px;box-shadow:var(--shadow);margin-top:8px}
+.contact-manager{display:flex;align-items:center;gap:20px;background:var(--white);border-radius:16px;padding:20px;box-shadow:var(--shadow);margin-top:8px;border:1px solid var(--border)}
 .contact-manager-img{width:100px;height:100px;border-radius:50%;overflow:hidden;flex-shrink:0}
 .contact-manager-img img{width:100%;height:100%;object-fit:cover;object-position:top center}
 .contact-manager-text{font-size:14px;color:var(--text-light);line-height:1.5}
@@ -238,7 +235,7 @@ a{text-decoration:none;color:inherit}
 .map-wrap iframe{width:100%;height:100%;border:0;min-height:400px}
 
 /* FORM */
-.form-card{background:var(--white);border-radius:16px;padding:40px;box-shadow:var(--shadow-lg);max-width:600px;margin:0 auto}
+.form-card{background:var(--white);border-radius:16px;padding:40px;box-shadow:var(--shadow-lg);max-width:600px;margin:0 auto;border:1px solid var(--border)}
 .form-title{font-size:24px;font-weight:700;color:var(--primary);margin-bottom:8px;text-align:center}
 .form-subtitle{font-size:14px;color:var(--text-light);text-align:center;margin-bottom:32px}
 .form-group{margin-bottom:20px}
@@ -516,7 +513,7 @@ a{text-decoration:none;color:inherit}
 </section>
 
 <!-- ADVANTAGES -->
-<section class="section section-dark">
+<section class="section section-light">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">Почему выбирают «Лида-Сервис»</h2>
@@ -554,7 +551,7 @@ a{text-decoration:none;color:inherit}
 </section>
 
 <!-- STEPS -->
-<section class="section section-light">
+<section class="section">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">Как получить имущество в лизинг</h2>
@@ -585,7 +582,7 @@ a{text-decoration:none;color:inherit}
 </section>
 
 <!-- CONDITIONS -->
-<section class="section" id="conditions">
+<section class="section section-light" id="conditions">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">Базовые условия лизинговой сделки</h2>
@@ -610,7 +607,7 @@ a{text-decoration:none;color:inherit}
         <div class="cond-label">Ставка удорожания в год</div>
       </div>
     </div>
-    <div style="margin-top:60px;background:var(--bg-light);border-radius:16px;padding:40px">
+    <div style="margin-top:60px;background:var(--white);border-radius:16px;padding:40px;border:1px solid var(--border);box-shadow:var(--shadow)">
       <h3 style="font-size:22px;font-weight:700;color:var(--primary);margin-bottom:24px;text-align:center">Требования к лизингополучателю</h3>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
         <div style="display:flex;gap:12px;align-items:flex-start"><i class="fas fa-check-circle" style="color:var(--accent);font-size:20px;margin-top:2px"></i><div><strong style="color:var(--primary)">Юридические лица</strong><p style="font-size:14px;color:var(--text-light);margin-top:4px">Регистрация в РБ, срок деятельности от 12 месяцев, положительная финансовая отчётность</p></div></div>
@@ -622,7 +619,7 @@ a{text-decoration:none;color:inherit}
 </section>
 
 <!-- DOCS & FAQ -->
-<section class="section section-light" id="docs">
+<section class="section" id="docs">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">Документы и FAQ</h2>
@@ -682,7 +679,7 @@ a{text-decoration:none;color:inherit}
 </section>
 
 <!-- ABOUT -->
-<section class="section" id="about">
+<section class="section section-light" id="about">
   <div class="container">
     <div class="about-grid">
       <div class="about-text">
@@ -717,7 +714,7 @@ a{text-decoration:none;color:inherit}
 </section>
 
 <!-- PARTNERS -->
-<section class="section section-light">
+<section class="section">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">Наши партнёры</h2>
@@ -742,7 +739,7 @@ a{text-decoration:none;color:inherit}
 </section>
 
 <!-- CLIENTS -->
-<section class="section">
+<section class="section section-light">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">Наши клиенты</h2>
@@ -799,7 +796,7 @@ a{text-decoration:none;color:inherit}
 </section>
 
 <!-- FORM -->
-<section class="section" id="form">
+<section class="section section-light" id="form">
   <div class="container">
     <div class="form-card">
       <div id="formContent">
@@ -850,7 +847,7 @@ a{text-decoration:none;color:inherit}
 </section>
 
 <!-- CONTACTS -->
-<section class="section section-light" id="contacts">
+<section class="section" id="contacts">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">Контакты</h2>
