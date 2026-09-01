@@ -296,6 +296,41 @@ a{text-decoration:none;color:inherit}
 .scroll-top.visible{opacity:1;visibility:visible}
 .scroll-top:hover{background:var(--accent);color:var(--primary);transform:translateY(-4px)}
 
+/* COOKIE BANNER */
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;background:var(--white);border-top:3px solid var(--accent);box-shadow:0 -4px 30px rgba(0,0,0,0.15);padding:20px 24px;z-index:9999;transform:translateY(100%);transition:transform .4s ease}
+.cookie-banner.show{transform:translateY(0)}
+.cookie-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.cookie-icon{font-size:32px;color:var(--accent);flex-shrink:0}
+.cookie-text{flex:1;min-width:250px}
+.cookie-text h4{font-size:15px;font-weight:700;color:var(--primary);margin-bottom:4px}
+.cookie-text p{font-size:13px;color:var(--text-light);line-height:1.5}
+.cookie-text a{color:var(--primary);font-weight:600;text-decoration:underline}
+.cookie-text a:hover{color:var(--accent)}
+.cookie-buttons{display:flex;gap:10px;flex-shrink:0}
+.cookie-btn{padding:10px 20px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;border:none;font-family:inherit;transition:all .2s}
+.cookie-accept{background:var(--accent);color:var(--primary)}
+.cookie-accept:hover{background:var(--accent-hover)}
+.cookie-decline{background:transparent;color:var(--text-light);border:1px solid var(--border)}
+.cookie-decline:hover{background:var(--bg-light);color:var(--text)}
+
+/* PRIVACY MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:10000;display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+.modal-overlay.show{display:flex}
+.modal-content{background:var(--white);border-radius:16px;max-width:800px;width:100%;max-height:85vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow-lg);animation:modalIn .3s ease}
+@keyframes modalIn{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+.modal-header{padding:24px 32px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
+.modal-header h3{font-size:22px;font-weight:700;color:var(--primary)}
+.modal-close{width:36px;height:36px;border-radius:50%;background:var(--bg-light);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-light);transition:all .2s;font-size:18px}
+.modal-close:hover{background:var(--accent);color:var(--primary)}
+.modal-body{padding:32px;overflow-y:auto;flex:1}
+.modal-body h4{font-size:17px;font-weight:700;color:var(--primary);margin:24px 0 12px}
+.modal-body h4:first-child{margin-top:0}
+.modal-body p{font-size:14px;color:var(--text-light);line-height:1.7;margin-bottom:12px}
+.modal-body ul{margin:8px 0 16px 20px}
+.modal-body li{font-size:14px;color:var(--text-light);line-height:1.7;margin-bottom:6px}
+.modal-body strong{color:var(--text)}
+.modal-footer{padding:20px 32px;border-top:1px solid var(--border);text-align:right;flex-shrink:0}
+
 /* RESPONSIVE */
 @media(max-width:1024px){
   .hero-inner{grid-template-columns:1fr;gap:40px}
@@ -325,6 +360,10 @@ a{text-decoration:none;color:inherit}
   .partners-grid{grid-template-columns:1fr}
   .footer-bottom{flex-direction:column;text-align:center}
   .contact-manager{flex-direction:column;text-align:center}
+  .cookie-inner{flex-direction:column;text-align:center}
+  .cookie-buttons{width:100%;justify-content:center}
+  .modal-content{max-height:95vh;margin:10px}
+  .modal-header,.modal-body,.modal-footer{padding-left:20px;padding-right:20px}
 }
 </style>
 </head>
@@ -835,7 +874,7 @@ a{text-decoration:none;color:inherit}
             <textarea class="form-textarea" placeholder="Опишите ваши потребности..."></textarea>
           </div>
           <div class="form-group">
-            <label class="form-check"><input type="checkbox" required> Я согласен на обработку персональных данных в соответствии с политикой конфиденциальности</label>
+            <label class="form-check"><input type="checkbox" required> Я согласен на обработку персональных данных в соответствии с <a href="#" onclick="openPrivacyModal();return false;" style="color:var(--primary);text-decoration:underline">политикой конфиденциальности</a></label>
           </div>
           <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Отправить заявку</button>
         </form>
@@ -988,19 +1027,125 @@ a{text-decoration:none;color:inherit}
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© 1997–2026 ООО «Лида-Сервис». Все права защищены.</div>
-      <div class="footer-social">
-        <a href="#" aria-label="VK"><i class="fab fa-vk"></i></a>
-        <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="mailto:info@lida-servis.by" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+        <a href="#" onclick="openPrivacyModal();return false;" style="font-size:13px;opacity:0.7;transition:opacity .2s" onmouseover="this.style.opacity='1';this.style.color='var(--accent)'" onmouseout="this.style.opacity='0.7';this.style.color='inherit'"><i class="fas fa-shield-alt" style="margin-right:6px"></i>Политика конфиденциальности</a>
+        <div class="footer-social">
+          <a href="#" aria-label="VK"><i class="fab fa-vk"></i></a>
+          <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:info@lida-servis.by" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
       </div>
     </div>
   </div>
 </footer>
 
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-inner">
+    <div class="cookie-icon"><i class="fas fa-cookie-bite"></i></div>
+    <div class="cookie-text">
+      <h4>Мы используем файлы cookie</h4>
+      <p>Этот сайт использует файлы cookie для улучшения работы и анализа трафика. Продолжая использовать сайт, вы соглашаетесь с нашей <a href="#" onclick="openPrivacyModal();return false;">политикой конфиденциальности</a> и использованием файлов cookie.</p>
+    </div>
+    <div class="cookie-buttons">
+      <button class="cookie-btn cookie-accept" id="cookieAccept">Принять</button>
+      <button class="cookie-btn cookie-decline" id="cookieDecline">Отклонить</button>
+    </div>
+  </div>
+</div>
+
+<!-- PRIVACY MODAL -->
+<div class="modal-overlay" id="privacyModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Политика конфиденциальности</h3>
+      <button class="modal-close" onclick="closePrivacyModal()" aria-label="Закрыть"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body">
+      <h4>1. Общие положения</h4>
+      <p>Настоящая Политика конфиденциальности (далее — «Политика») разработана в соответствии с законодательством Республики Беларусь, в том числе Законом Республики Беларусь от 10 ноября 2008 года № 455-З «Об информации, информатизации и защите информации», Законом Республики Беларусь от 7 мая 2021 года № 99-З «О защите персональных данных», и определяет порядок обработки персональных данных и меры по обеспечению их безопасности, предпринимаемые Обществом с ограниченной ответственностью «Лида-Сервис» (далее — «Оператор», «Компания»).</p>
+      <p>Оператор ставит своей важнейшей целью и условием осуществления своей деятельности соблюдение прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.</p>
+
+      <h4>2. Основные понятия</h4>
+      <ul>
+        <li><strong>Персональные данные</strong> — любая информация, относящаяся к прямо или косвенно определённому физическому лицу (субъекту персональных данных).</li>
+        <li><strong>Обработка персональных данных</strong> — любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными.</li>
+        <li><strong>Файлы cookie</strong> — небольшие текстовые файлы, которые сохраняются на устройстве пользователя при посещении сайта и позволяют сайту запомнить информацию о действиях и предпочтениях пользователя.</li>
+        <li><strong>Сайт</strong> — интернет-ресурс Оператора, расположенный по адресу lida-servis.by.</li>
+      </ul>
+
+      <h4>3. Состав обрабатываемых персональных данных</h4>
+      <p>Оператор может обрабатывать следующие персональные данные Пользователя:</p>
+      <ul>
+        <li>Фамилия, имя, отчество;</li>
+        <li>Адрес электронной почты (e-mail);</li>
+        <li>Номер телефона;</li>
+        <li>Данные, полученные при заполнении форм на Сайте (вид имущества, сумма, срок лизинга и т.д.);</li>
+        <li>Технические данные: IP-адрес, информация о браузере, операционной системе, времени доступа, файлы cookie.</li>
+      </ul>
+
+      <h4>4. Цели обработки персональных данных</h4>
+      <p>Оператор обрабатывает персональные данные Пользователя в следующих целях:</p>
+      <ul>
+        <li>Обработка заявок, поступивших через формы обратной связи на Сайте;</li>
+        <li>Консультирование Пользователя по вопросам лизинговых услуг;</li>
+        <li>Заключение и исполнение договоров лизинга;</li>
+        <li>Информирование Пользователя об услугах Компании (с согласия Пользователя);</li>
+        <li>Улучшение работы Сайта и анализ статистики посещений;</li>
+        <li>Обеспечение безопасности Сайта и предотвращение мошенничества.</li>
+      </ul>
+
+      <h4>5. Правовые основания обработки</h4>
+      <p>Оператор обрабатывает персональные данные Пользователя только в случае их заполнения и/или отправки Пользователем самостоятельно через специальные формы, расположенные на Сайте. Заполняя соответствующие формы и/или отправляя свои персональные данные Оператору, Пользователь выражает своё согласие с данной Политикой.</p>
+
+      <h4>6. Порядок и условия обработки персональных данных</h4>
+      <p>Обработка персональных данных осуществляется без ограничения срока любым законным способом, в том числе в информационных системах персональных данных с использованием средств автоматизации и без использования таких средств.</p>
+      <p>Оператор принимает необходимые правовые, организационные и технические меры для защиты персональных данных от неправомерного или случайного доступа, уничтожения, изменения, блокирования, копирования, распространения персональных данных, а также от иных неправомерных действий третьих лиц.</p>
+      <p>Персональные данные не передаются третьим лицам, за исключением случаев, предусмотренных законодательством Республики Беларусь, а также случаев, необходимых для исполнения обязательств по договору лизинга (в том числе банкам-партнёрам).</p>
+
+      <h4>7. Использование файлов cookie</h4>
+      <p>Сайт использует файлы cookie для следующих целей:</p>
+      <ul>
+        <li><strong>Технические cookie</strong> — необходимы для корректной работы Сайта (сохранение настроек, состояния форм);</li>
+        <li><strong>Аналитические cookie</strong> — позволяют анализировать поведение пользователей на Сайте и улучшать его работу (Яндекс.Метрика, Google Analytics);</li>
+        <li><strong>Функциональные cookie</strong> — запоминают предпочтения пользователя (выбранный язык, регион).</li>
+      </ul>
+      <p>Пользователь может отключить использование файлов cookie в настройках своего браузера. Однако в этом случае некоторые функции Сайта могут работать некорректно.</p>
+      <p>При первом посещении Сайта Пользователю отображается уведомление об использовании файлов cookie. Продолжая использовать Сайт после получения уведомления, Пользователь даёт согласие на обработку файлов cookie в соответствии с настоящей Политикой.</p>
+
+      <h4>8. Права субъекта персональных данных</h4>
+      <p>Пользователь имеет право:</p>
+      <ul>
+        <li>Получать информацию об обработке своих персональных данных;</li>
+        <li>Требовать уточнения, блокирования или уничтожения персональных данных в случае, если они являются неполными, устаревшими, неточными;</li>
+        <li>Отозвать согласие на обработку персональных данных путём направления письменного уведомления Оператору;</li>
+        <li>Обжаловать действия или бездействие Оператора в уполномоченный орган по защите прав субъектов персональных данных или в судебном порядке.</li>
+      </ul>
+
+      <h4>9. Изменение Политики конфиденциальности</h4>
+      <p>Оператор имеет право вносить изменения в настоящую Политику конфиденциальности. При внесении изменений в актуальной редакции указывается дата последнего обновления. Новая редакция Политики вступает в силу с момента её размещения на Сайте, если иное не предусмотрено новой редакцией Политики.</p>
+
+      <h4>10. Контактная информация</h4>
+      <p>По всем вопросам, связанным с обработкой персональных данных и использованием файлов cookie, Вы можете обращаться к Оператору:</p>
+      <ul>
+        <li><strong>ООО «Лида-Сервис»</strong></li>
+        <li>Адрес: 231300, Гродненская область, г. Лида, ул. Кирова, д. 27, пом. 9</li>
+        <li>Телефон: <a href="tel:+375154659775" style="color:var(--primary);text-decoration:underline">8 (0154) 65-97-75</a></li>
+        <li>E-mail: <a href="mailto:info@lida-servis.by" style="color:var(--primary);text-decoration:underline">info@lida-servis.by</a></li>
+      </ul>
+      <p style="margin-top:20px;font-size:13px;color:var(--text-light)"><em>Дата последнего обновления: 1 сентября 2026 года</em></p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" onclick="closePrivacyModal()">Закрыть</button>
+    </div>
+  </div>
+</div>
+
 <button class="scroll-top" id="scrollTop" aria-label="Наверх"><i class="fas fa-arrow-up"></i></button>
 
 <script>
+// Calculator
 const calcPrice=document.getElementById('calcPrice');
 const calcAdv=document.getElementById('calcAdv');
 const calcTerm=document.getElementById('calcTerm');
@@ -1030,6 +1175,7 @@ calcAdv.addEventListener('input',calculate);
 calcTerm.addEventListener('input',calculate);
 calculate();
 
+// Docs tabs
 const docs={
   legal:['Уставные документы (копия)','Свидетельство о государственной регистрации','Свидетельство о постановке на учёт в налоговом органе','Бухгалтерская отчётность за последний отчётный период','Финансовая отчётность за последние 12 месяцев','Документы, подтверждающие полномочия руководителя','Карточка предприятия с банковскими реквизитами','Бизнес-план или обоснование необходимости приобретения имущества','Документы на приобретаемое имущество (коммерческое предложение, счёт)'],
   ip:['Паспорт индивидуального предпринимателя','Свидетельство о государственной регистрации ИП','Свидетельство о постановке на учёт в налоговом органе','Налоговая декларация за последний отчётный период','Выписка из банка о движении средств по счетам за 6 месяцев','Документы, подтверждающие доходы','Карточка предприятия с банковскими реквизитами','Документы на приобретаемое имущество'],
@@ -1050,6 +1196,7 @@ document.querySelectorAll('.doc-tab').forEach(tab=>{
   });
 });
 
+// FAQ
 document.querySelectorAll('.faq-item').forEach(item=>{
   item.querySelector('.faq-q').addEventListener('click',()=>{
     const wasOpen=item.classList.contains('open');
@@ -1058,12 +1205,14 @@ document.querySelectorAll('.faq-item').forEach(item=>{
   });
 });
 
+// Form
 document.getElementById('leadForm').addEventListener('submit',e=>{
   e.preventDefault();
   document.getElementById('formContent').style.display='none';
   document.getElementById('formSuccess').style.display='block';
 });
 
+// Burger
 const burger=document.getElementById('burger');
 const mobileNav=document.getElementById('mobileNav');
 burger.addEventListener('click',()=>{
@@ -1071,6 +1220,7 @@ burger.addEventListener('click',()=>{
 });
 mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileNav.classList.remove('open')));
 
+// Scroll top
 const scrollTopBtn=document.getElementById('scrollTop');
 window.addEventListener('scroll',()=>{
   if(window.scrollY>400)scrollTopBtn.classList.add('visible');
@@ -1078,12 +1228,14 @@ window.addEventListener('scroll',()=>{
 });
 scrollTopBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 
+// Header shadow
 const header=document.getElementById('header');
 window.addEventListener('scroll',()=>{
   if(window.scrollY>20)header.style.boxShadow='0 2px 20px rgba(0,0,0,0.1)';
   else header.style.boxShadow='0 2px 10px rgba(0,0,0,0.05)';
 });
 
+// Active nav link
 const sections=document.querySelectorAll('section[id]');
 const navLinks=document.querySelectorAll('.nav a');
 window.addEventListener('scroll',()=>{
@@ -1096,6 +1248,55 @@ window.addEventListener('scroll',()=>{
     link.classList.remove('active');
     if(link.getAttribute('href')==='#'+current)link.classList.add('active');
   });
+});
+
+// COOKIE BANNER
+const cookieBanner=document.getElementById('cookieBanner');
+const cookieAccept=document.getElementById('cookieAccept');
+const cookieDecline=document.getElementById('cookieDecline');
+
+function showCookieBanner(){
+  const consent=localStorage.getItem('cookie_consent');
+  if(!consent){
+    setTimeout(()=>{
+      cookieBanner.classList.add('show');
+    },1500);
+  }
+}
+
+cookieAccept.addEventListener('click',()=>{
+  localStorage.setItem('cookie_consent','accepted');
+  cookieBanner.classList.remove('show');
+});
+
+cookieDecline.addEventListener('click',()=>{
+  localStorage.setItem('cookie_consent','declined');
+  cookieBanner.classList.remove('show');
+});
+
+showCookieBanner();
+
+// PRIVACY MODAL
+const privacyModal=document.getElementById('privacyModal');
+
+function openPrivacyModal(){
+  privacyModal.classList.add('show');
+  document.body.style.overflow='hidden';
+}
+
+function closePrivacyModal(){
+  privacyModal.classList.remove('show');
+  document.body.style.overflow='';
+}
+
+privacyModal.addEventListener('click',(e)=>{
+  if(e.target===privacyModal)closePrivacyModal();
+});
+
+document.addEventListener('keydown',(e)=>{
+  if(e.key==='Escape'&&privacyModal.classList.contains('show')){
+    closePrivacyModal();
+  }
 });
 </script>
 </body>
