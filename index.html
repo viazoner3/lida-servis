@@ -140,17 +140,17 @@ a{text-decoration:none;color:inherit}
 
 /* LEASING TYPES - ИСПРАВЛЕННЫЕ ПИКТОГРАММЫ */
 .types-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.type-card{background:var(--white);border-radius:16px;box-shadow:var(--shadow);transition:all .3s;cursor:pointer;position:relative}
+.type-card{background:var(--white);border-radius:16px;box-shadow:var(--shadow);transition:all .3s;cursor:pointer;position:relative;overflow:visible}
 .type-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
 .type-img{height:200px;overflow:hidden;position:relative;border-radius:16px 16px 0 0}
 .type-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .type-card:hover .type-img img{transform:scale(1.08)}
-.type-icon{position:absolute;bottom:-24px;left:24px;width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--white);box-shadow:0 4px 12px rgba(0,0,0,0.15);z-index:2}
+.type-icon{position:absolute;top:172px;left:24px;width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--white);box-shadow:0 4px 12px rgba(0,0,0,0.15);z-index:2}
 .type-icon.blue{background:#3b82f6}
 .type-icon.orange{background:#f59e0b}
 .type-icon.green{background:#10b981}
 .type-icon.purple{background:#8b5cf6}
-.type-body{padding:40px 24px 24px;border-radius:0 0 16px 16px;background:var(--white)}
+.type-body{padding:56px 24px 24px;border-radius:0 0 16px 16px;background:var(--white)}
 .type-title{font-size:18px;font-weight:700;color:var(--primary);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px}
 .type-desc{font-size:14px;color:var(--text-light);line-height:1.6;margin-bottom:16px}
 .type-link{font-size:14px;font-weight:600;color:var(--primary);display:inline-flex;align-items:center;gap:6px;transition:gap .2s}
@@ -288,55 +288,43 @@ a{text-decoration:none;color:inherit}
 .form-success h3{font-size:22px;font-weight:700;color:var(--primary);margin-bottom:8px}
 .form-success p{color:var(--text-light)}
 
-/* CTA - НОВЫЙ ДИЗАЙН С РАМКОЙ НА ТЕМНОМ ФОНЕ */
+/* CTA - ТЕКСТ НА ФОНЕ КАРТИНКИ */
 .cta-section{
-  padding:80px 0;
-  background:var(--primary);
-}
-.cta-wrapper{
-  max-width:1024px;
-  width:80%;
-  margin:0 auto;
-  background:var(--white);
-  border-radius:20px;
-  box-shadow:var(--shadow-lg);
+  position:relative;
+  padding:100px 0;
+  background:url('img/cta-back.png') center/cover no-repeat;
   overflow:hidden;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  min-height:280px;
+}
+.cta-section::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to right,rgba(19,43,79,0.92) 0%,rgba(19,43,79,0.75) 50%,rgba(19,43,79,0.3) 100%);
+}
+.cta-inner{
+  position:relative;
+  z-index:1;
+  max-width:1280px;
+  margin:0 auto;
+  padding:0 24px;
 }
 .cta-content{
-  padding:50px 40px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
+  max-width:560px;
 }
 .cta-content h2{
-  font-size:32px;
+  font-size:42px;
   font-weight:800;
-  color:var(--primary);
-  margin-bottom:16px;
-  line-height:1.2;
+  color:var(--white);
+  margin-bottom:20px;
+  line-height:1.15;
   text-transform:uppercase;
   letter-spacing:0.5px;
 }
 .cta-content p{
-  font-size:15px;
-  color:var(--text-light);
-  margin-bottom:28px;
+  font-size:17px;
+  color:rgba(255,255,255,0.85);
+  margin-bottom:36px;
   line-height:1.6;
-}
-.cta-image{
-  position:relative;
-  overflow:hidden;
-  background:var(--bg-light);
-}
-.cta-image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
-  display:block;
 }
 
 /* FOOTER */
@@ -420,8 +408,7 @@ a{text-decoration:none;color:inherit}
   .footer-grid{grid-template-columns:1fr 1fr}
   .steps-grid{grid-template-columns:1fr}
   .steps-grid::before{display:none}
-  .cta-wrapper{width:90%}
-  .cta-content h2{font-size:28px}
+  .cta-content h2{font-size:36px}
 }
 @media(max-width:768px){
   .nav,.header-phone,.header-btn{display:none}
@@ -442,21 +429,12 @@ a{text-decoration:none;color:inherit}
   .cookie-buttons{width:100%;justify-content:center}
   .modal-content{max-height:95vh;margin:10px}
   .modal-header,.modal-body,.modal-footer{padding-left:20px;padding-right:20px}
-  .cta-section{padding:40px 0}
-  .cta-wrapper{
-    width:92%;
-    grid-template-columns:1fr;
-    max-width:500px;
-  }
-  .cta-content{padding:32px 24px}
-  .cta-content h2{font-size:24px}
-  .cta-image{height:200px}
+  .cta-section{padding:60px 0}
+  .cta-content h2{font-size:28px}
+  .cta-content p{font-size:15px}
 }
 @media(max-width:480px){
-  .cta-wrapper{width:95%}
-  .cta-content{padding:24px 20px}
-  .cta-content h2{font-size:22px}
-  .cta-image{height:180px}
+  .cta-content h2{font-size:24px}
 }
 </style>
 </head>
@@ -579,8 +557,8 @@ a{text-decoration:none;color:inherit}
       <div class="type-card">
         <div class="type-img">
           <img src="img/liz-auto.png" alt="Автотранспорт">
-          <div class="type-icon blue"><i class="fas fa-truck"></i></div>
         </div>
+        <div class="type-icon blue"><i class="fas fa-truck"></i></div>
         <div class="type-body">
           <h3 class="type-title">Автотранспорт</h3>
           <p class="type-desc">Лизинг легковых и грузовых автомобилей, микроавтобусов, прицепов и полуприцепов для бизнеса.</p>
@@ -590,8 +568,8 @@ a{text-decoration:none;color:inherit}
       <div class="type-card">
         <div class="type-img">
           <img src="img/liz-tech.png" alt="Спецтехника">
-          <div class="type-icon orange"><i class="fas fa-hard-hat"></i></div>
         </div>
+        <div class="type-icon orange"><i class="fas fa-hard-hat"></i></div>
         <div class="type-body">
           <h3 class="type-title">Спецтехника</h3>
           <p class="type-desc">Строительная, дорожная, коммунальная и сельскохозяйственная техника от ведущих производителей.</p>
@@ -601,8 +579,8 @@ a{text-decoration:none;color:inherit}
       <div class="type-card">
         <div class="type-img">
           <img src="img/liz-equipment.png" alt="Оборудование">
-          <div class="type-icon green"><i class="fas fa-cogs"></i></div>
         </div>
+        <div class="type-icon green"><i class="fas fa-cogs"></i></div>
         <div class="type-body">
           <h3 class="type-title">Оборудование</h3>
           <p class="type-desc">Производственное, торговое и медицинское оборудование для развития и модернизации бизнеса.</p>
@@ -612,8 +590,8 @@ a{text-decoration:none;color:inherit}
       <div class="type-card">
         <div class="type-img">
           <img src="img/liz-building.png" alt="Недвижимость">
-          <div class="type-icon purple"><i class="fas fa-building"></i></div>
         </div>
+        <div class="type-icon purple"><i class="fas fa-building"></i></div>
         <div class="type-body">
           <h3 class="type-title">Недвижимость</h3>
           <p class="type-desc">Коммерческая недвижимость: офисы, склады, торговые и производственные площади на выгодных условиях.</p>
@@ -893,16 +871,13 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- CTA - ТЕМНЫЙ ФОН -->
+<!-- CTA - ТЕКСТ НА ФОНЕ КАРТИНКИ -->
 <section class="cta-section">
-  <div class="cta-wrapper">
+  <div class="cta-inner">
     <div class="cta-content">
       <h2>ГОТОВЫ РАЗВИВАТЬ<br>ВАШ БИЗНЕС?</h2>
       <p>Оставьте заявку прямо сейчас, и наши специалисты свяжутся с вами для консультации и расчёта условий.</p>
       <a href="#form" class="btn btn-primary btn-lg">Оставить заявку</a>
-    </div>
-    <div class="cta-image">
-      <img src="img/cta-back.png" alt="Партнёрство и рукопожатие">
     </div>
   </div>
 </section>
