@@ -270,14 +270,47 @@ a{text-decoration:none;color:inherit}
 .form-success h3{font-size:22px;font-weight:700;color:var(--primary);margin-bottom:8px}
 .form-success p{color:var(--text-light)}
 
-/* CTA */
-.cta-section{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);padding:80px 0;color:var(--white);position:relative;overflow:hidden}
-.cta-section::before{content:'';position:absolute;top:-50%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(247,195,68,0.15) 0%,transparent 70%);border-radius:50%}
-.cta-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.cta-content h2{font-size:36px;font-weight:800;margin-bottom:16px;line-height:1.2}
-.cta-content p{font-size:16px;opacity:0.85;margin-bottom:32px;line-height:1.6}
-.cta-img{border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);background:var(--white);display:flex;align-items:center;justify-content:center}
-.cta-img img{width:100%;height:auto;max-height:450px;object-fit:contain}
+/* CTA - НОВЫЙ ДИЗАЙН */
+.cta-section{
+  position:relative;
+  padding:100px 0;
+  background:url('img/cta-back.png') right center/cover no-repeat;
+  overflow:hidden;
+  min-height:400px;
+}
+.cta-section::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to right,rgba(255,255,255,0.97) 0%,rgba(255,255,255,0.85) 45%,rgba(255,255,255,0.3) 70%,transparent 100%);
+}
+.cta-inner{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+.cta-content h2{
+  font-size:42px;
+  font-weight:800;
+  color:var(--primary);
+  margin-bottom:20px;
+  line-height:1.15;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+}
+.cta-content p{
+  font-size:16px;
+  color:var(--text-light);
+  margin-bottom:32px;
+  line-height:1.6;
+  max-width:450px;
+}
+.cta-spacer{
+  /* Пустой блок справа для отображения фона с рукопожатием */
+}
 
 /* FOOTER */
 .footer{background:var(--primary-dark);color:var(--white);padding:60px 0 24px}
@@ -360,6 +393,9 @@ a{text-decoration:none;color:inherit}
   .footer-grid{grid-template-columns:1fr 1fr}
   .steps-grid{grid-template-columns:1fr}
   .steps-grid::before{display:none}
+  .cta-section{background-position:center}
+  .cta-section::before{background:rgba(255,255,255,0.92)}
+  .cta-content h2{font-size:32px}
 }
 @media(max-width:768px){
   .nav,.header-phone,.header-btn{display:none}
@@ -380,6 +416,8 @@ a{text-decoration:none;color:inherit}
   .cookie-buttons{width:100%;justify-content:center}
   .modal-content{max-height:95vh;margin:10px}
   .modal-header,.modal-body,.modal-footer{padding-left:20px;padding-right:20px}
+  .cta-section{padding:60px 0}
+  .cta-content h2{font-size:28px}
 }
 </style>
 </head>
@@ -816,17 +854,15 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- CTA -->
+<!-- CTA - НОВЫЙ ДИЗАЙН -->
 <section class="cta-section">
   <div class="container cta-inner">
     <div class="cta-content">
-      <h2>Готовы развивать ваш бизнес?</h2>
-      <p>Оставьте заявку прямо сейчас, и наши специалисты свяжутся с вами для консультации и расчёта условий лизинга под ваши задачи.</p>
+      <h2>ГОТОВЫ РАЗВИВАТЬ<br>ВАШ БИЗНЕС?</h2>
+      <p>Оставьте заявку прямо сейчас, и наши специалисты свяжутся с вами для консультации и расчёта условий.</p>
       <a href="#form" class="btn btn-primary btn-lg">Оставить заявку</a>
     </div>
-    <div class="cta-img">
-      <img src="img/cta-img.png" alt="Партнёрство">
-    </div>
+    <div class="cta-spacer"></div>
   </div>
 </section>
 
