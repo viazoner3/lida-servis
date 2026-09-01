@@ -174,19 +174,32 @@ a{text-decoration:none;color:inherit}
 .step-title{font-size:18px;font-weight:700;color:var(--primary);margin-bottom:12px}
 .step-desc{font-size:14px;color:var(--text-light);line-height:1.6}
 
-/* CONDITIONS */
+/* CONDITIONS - на темном фоне */
 .cond-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .cond-card{background:var(--white);border-radius:16px;padding:32px 24px;text-align:center;box-shadow:var(--shadow);border-top:4px solid var(--accent)}
 .cond-value{font-size:42px;font-weight:800;color:var(--primary);line-height:1;margin-bottom:8px}
 .cond-value span{font-size:20px;font-weight:600}
 .cond-label{font-size:14px;color:var(--text-light);font-weight:500}
+.section-dark .cond-requirements{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  color:var(--white);
+}
+.section-dark .cond-requirements h3{color:var(--white)}
+.section-dark .cond-req-item strong{color:var(--accent)}
+.section-dark .cond-req-item p{color:rgba(255,255,255,0.7)}
 
 /* DOCS */
 .docs-tabs{display:flex;gap:12px;margin-bottom:32px;flex-wrap:wrap;justify-content:center}
 .doc-tab{padding:12px 24px;border-radius:8px;background:var(--white);border:2px solid var(--border);font-weight:600;font-size:14px;cursor:pointer;transition:all .2s;font-family:inherit}
 .doc-tab.active,.doc-tab:hover{background:var(--primary);color:var(--white);border-color:var(--primary)}
+.section-dark .doc-tab{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);color:var(--white)}
+.section-dark .doc-tab.active,.section-dark .doc-tab:hover{background:var(--accent);color:var(--primary);border-color:var(--accent)}
 .doc-list{background:var(--white);border-radius:16px;padding:32px;box-shadow:var(--shadow)}
+.section-dark .doc-list{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1)}
 .doc-item{display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)}
+.section-dark .doc-item{border-bottom-color:rgba(255,255,255,0.1)}
+.section-dark .doc-text{color:rgba(255,255,255,0.9)}
 .doc-item:last-child{border-bottom:none}
 .doc-check{width:28px;height:28px;min-width:28px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:14px;font-weight:700}
 .doc-text{font-size:15px;line-height:1.6}
@@ -194,15 +207,20 @@ a{text-decoration:none;color:inherit}
 /* FAQ */
 .faq-list{max-width:900px;margin:0 auto}
 .faq-item{background:var(--white);border-radius:12px;margin-bottom:12px;box-shadow:var(--shadow);overflow:hidden}
+.section-dark .faq-item{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);box-shadow:none}
 .faq-q{padding:20px 24px;font-weight:600;font-size:16px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--primary);transition:background .2s}
+.section-dark .faq-q{color:var(--white)}
 .faq-q:hover{background:var(--bg-light)}
+.section-dark .faq-q:hover{background:rgba(255,255,255,0.1)}
 .faq-q i{transition:transform .3s;color:var(--accent)}
 .faq-item.open .faq-q i{transform:rotate(180deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .3s,padding .3s}
 .faq-item.open .faq-a{max-height:500px;padding:0 24px 20px}
 .faq-a p{font-size:14px;color:var(--text-light);line-height:1.7}
+.section-dark .faq-a p{color:rgba(255,255,255,0.7)}
 .faq-a ul{list-style:none;padding:0;margin:8px 0}
 .faq-a li{position:relative;padding-left:20px;margin-bottom:6px;font-size:14px;color:var(--text-light);line-height:1.6}
+.section-dark .faq-a li{color:rgba(255,255,255,0.7)}
 .faq-a li::before{content:'';position:absolute;left:0;top:8px;width:8px;height:8px;background:var(--accent);border-radius:50%}
 
 /* ABOUT */
@@ -216,7 +234,7 @@ a{text-decoration:none;color:inherit}
 .about-img{border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);background:var(--bg-light);display:flex;align-items:center;justify-content:center}
 .about-img img{width:100%;height:auto;max-height:560px;object-fit:contain;object-position:top center}
 
-/* PARTNERS */
+/* PARTNERS - на темном фоне */
 .partners-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;max-width:800px;margin:0 auto}
 .partner-card{background:var(--white);border-radius:16px;padding:40px 32px;text-align:center;box-shadow:var(--shadow);transition:all .3s;cursor:pointer;display:block}
 .partner-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
@@ -270,10 +288,10 @@ a{text-decoration:none;color:inherit}
 .form-success h3{font-size:22px;font-weight:700;color:var(--primary);margin-bottom:8px}
 .form-success p{color:var(--text-light)}
 
-/* CTA - НОВЫЙ ДИЗАЙН С РАМКОЙ */
+/* CTA - НОВЫЙ ДИЗАЙН С РАМКОЙ НА ТЕМНОМ ФОНЕ */
 .cta-section{
   padding:80px 0;
-  background:var(--bg-light);
+  background:var(--primary);
 }
 .cta-wrapper{
   max-width:1024px;
@@ -675,8 +693,8 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- CONDITIONS -->
-<section class="section" id="conditions">
+<!-- CONDITIONS - ТЕМНЫЙ ФОН -->
+<section class="section section-dark" id="conditions">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">Базовые условия лизинговой сделки</h2>
@@ -701,19 +719,19 @@ a{text-decoration:none;color:inherit}
         <div class="cond-label">Ставка удорожания в год</div>
       </div>
     </div>
-    <div style="margin-top:60px;background:var(--bg-light);border-radius:16px;padding:40px">
-      <h3 style="font-size:22px;font-weight:700;color:var(--primary);margin-bottom:24px;text-align:center">Требования к лизингополучателю</h3>
+    <div class="cond-requirements" style="margin-top:60px;border-radius:16px;padding:40px">
+      <h3 style="font-size:22px;font-weight:700;margin-bottom:24px;text-align:center">Требования к лизингополучателю</h3>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
-        <div style="display:flex;gap:12px;align-items:flex-start"><i class="fas fa-check-circle" style="color:var(--accent);font-size:20px;margin-top:2px"></i><div><strong style="color:var(--primary)">Юридические лица</strong><p style="font-size:14px;color:var(--text-light);margin-top:4px">Регистрация в РБ, срок деятельности от 12 месяцев, положительная финансовая отчётность</p></div></div>
-        <div style="display:flex;gap:12px;align-items:flex-start"><i class="fas fa-check-circle" style="color:var(--accent);font-size:20px;margin-top:2px"></i><div><strong style="color:var(--primary)">Индивидуальные предприниматели</strong><p style="font-size:14px;color:var(--text-light);margin-top:4px">Действующая регистрация, подтверждённый доход, отсутствие просроченной задолженности</p></div></div>
-        <div style="display:flex;gap:12px;align-items:flex-start"><i class="fas fa-check-circle" style="color:var(--accent);font-size:20px;margin-top:2px"></i><div><strong style="color:var(--primary)">Физические лица</strong><p style="font-size:14px;color:var(--text-light);margin-top:4px">Гражданство РБ, возраст от 21 года, подтверждённый источник дохода</p></div></div>
+        <div class="cond-req-item" style="display:flex;gap:12px;align-items:flex-start"><i class="fas fa-check-circle" style="color:var(--accent);font-size:20px;margin-top:2px"></i><div><strong>Юридические лица</strong><p style="font-size:14px;margin-top:4px">Регистрация в РБ, срок деятельности от 12 месяцев, положительная финансовая отчётность</p></div></div>
+        <div class="cond-req-item" style="display:flex;gap:12px;align-items:flex-start"><i class="fas fa-check-circle" style="color:var(--accent);font-size:20px;margin-top:2px"></i><div><strong>Индивидуальные предприниматели</strong><p style="font-size:14px;margin-top:4px">Действующая регистрация, подтверждённый доход, отсутствие просроченной задолженности</p></div></div>
+        <div class="cond-req-item" style="display:flex;gap:12px;align-items:flex-start"><i class="fas fa-check-circle" style="color:var(--accent);font-size:20px;margin-top:2px"></i><div><strong>Физические лица</strong><p style="font-size:14px;margin-top:4px">Гражданство РБ, возраст от 21 года, подтверждённый источник дохода</p></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- DOCS & FAQ -->
-<section class="section section-light" id="docs">
+<!-- DOCS & FAQ - ТЕМНЫЙ ФОН -->
+<section class="section section-dark" id="docs">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">Документы и FAQ</h2>
@@ -727,7 +745,7 @@ a{text-decoration:none;color:inherit}
     </div>
     <div class="doc-list" id="docList"></div>
     <div style="margin-top:60px">
-      <h3 style="font-size:24px;font-weight:700;color:var(--primary);text-align:center;margin-bottom:32px">Часто задаваемые вопросы</h3>
+      <h3 style="font-size:24px;font-weight:700;color:var(--white);text-align:center;margin-bottom:32px">Часто задаваемые вопросы</h3>
       <div class="faq-list">
         <div class="faq-item">
           <div class="faq-q">Что такое лизинг и чем он отличается от кредита? <i class="fas fa-chevron-down"></i></div>
@@ -807,8 +825,8 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- PARTNERS -->
-<section class="section section-light">
+<!-- PARTNERS - ТЕМНЫЙ ФОН -->
+<section class="section section-dark">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">Наши партнёры</h2>
@@ -833,7 +851,7 @@ a{text-decoration:none;color:inherit}
 </section>
 
 <!-- CLIENTS -->
-<section class="section">
+<section class="section section-light">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">Наши клиенты</h2>
@@ -875,7 +893,7 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- CTA - НОВЫЙ ДИЗАЙН С РАМКОЙ -->
+<!-- CTA - ТЕМНЫЙ ФОН -->
 <section class="cta-section">
   <div class="cta-wrapper">
     <div class="cta-content">
@@ -1047,11 +1065,11 @@ a{text-decoration:none;color:inherit}
       </div>
       <div>
         <div class="footer-title">Раскрытие информации</div>
-        <div class="footer-disclosure-item"><a href="#"><i class="fas fa-file-pdf"></i> Устав ООО «Лида-Сервис»</a></div>
-        <div class="footer-disclosure-item"><a href="#"><i class="fas fa-file-pdf"></i> Бухгалтерский баланс за 2025 год</a></div>
-        <div class="footer-disclosure-item"><a href="#"><i class="fas fa-file-pdf"></i> Бухгалтерский баланс за 2024 год</a></div>
-        <div class="footer-disclosure-item"><a href="#"><i class="fas fa-file-pdf"></i> Свидетельство о государственной регистрации</a></div>
-        <div class="footer-disclosure-item"><a href="#"><i class="fas fa-file-pdf"></i> Лицензия на лизинговую деятельность</a></div>
+        <div class="footer-disclosure-item"><a href="docs/ustav.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Устав ООО «Лида-Сервис»</a></div>
+        <div class="footer-disclosure-item"><a href="docs/Balans2026.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Бухгалтерский баланс за последний отчетный год</a></div>
+        <div class="footer-disclosure-item"><a href="docs/Zapiska2026.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Пояснительная записка к Балансу</a></div>
+        <div class="footer-disclosure-item"><a href="docs/svidetelstvo-o-vkluchenii.jpg" target="_blank"><i class="fas fa-file-image"></i> Свидетельство о включении в реестр лизинговых организаций</a></div>
+        <div class="footer-disclosure-item"><a href="docs/svidetelstvo-o-registracii.jpg" target="_blank"><i class="fas fa-file-image"></i> Свидетельство о регистрации</a></div>
       </div>
     </div>
     <div class="footer-bottom">
