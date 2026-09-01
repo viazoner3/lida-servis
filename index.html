@@ -138,19 +138,19 @@ a{text-decoration:none;color:inherit}
 .section-dark .section-subtitle{color:rgba(255,255,255,0.7)}
 .section-line{width:60px;height:4px;background:var(--accent);margin:20px auto 0;border-radius:2px}
 
-/* LEASING TYPES */
+/* LEASING TYPES - ИСПРАВЛЕННЫЕ ПИКТОГРАММЫ */
 .types-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.type-card{background:var(--white);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:all .3s;cursor:pointer}
+.type-card{background:var(--white);border-radius:16px;box-shadow:var(--shadow);transition:all .3s;cursor:pointer;position:relative}
 .type-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
-.type-img{height:200px;overflow:hidden;position:relative}
+.type-img{height:200px;overflow:hidden;position:relative;border-radius:16px 16px 0 0}
 .type-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .type-card:hover .type-img img{transform:scale(1.08)}
-.type-icon{position:absolute;bottom:-24px;left:24px;width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--white);box-shadow:0 4px 12px rgba(0,0,0,0.15)}
+.type-icon{position:absolute;bottom:-24px;left:24px;width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--white);box-shadow:0 4px 12px rgba(0,0,0,0.15);z-index:2}
 .type-icon.blue{background:#3b82f6}
 .type-icon.orange{background:#f59e0b}
 .type-icon.green{background:#10b981}
 .type-icon.purple{background:#8b5cf6}
-.type-body{padding:40px 24px 24px}
+.type-body{padding:40px 24px 24px;border-radius:0 0 16px 16px;background:var(--white)}
 .type-title{font-size:18px;font-weight:700;color:var(--primary);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px}
 .type-desc{font-size:14px;color:var(--text-light);line-height:1.6;margin-bottom:16px}
 .type-link{font-size:14px;font-weight:600;color:var(--primary);display:inline-flex;align-items:center;gap:6px;transition:gap .2s}
@@ -734,7 +734,7 @@ a{text-decoration:none;color:inherit}
 <section class="section section-dark" id="docs">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title">Документы и FAQ</h2>
+      <h2 class="section-title">Документы</h2>
       <p class="section-subtitle">Всё необходимое для оформления лизинговой сделки</p>
       <div class="section-line"></div>
     </div>
@@ -879,7 +879,7 @@ a{text-decoration:none;color:inherit}
       </a>
       <a href="https://tdn.by/" target="_blank" rel="noopener" class="client-card">
         <div class="client-logo">
-          <img src="https://image.qwenlm.ai/public_source/eaaf2eb9-3a3d-4a96-b824-f8fe105953e7/17c9ca06a-770a-4e3d-9dbe-5b3566457191.png" alt="ТД Неман">
+          <img src="img/logo-tdn.png" alt="ТД Неман">
         </div>
         <div class="client-name">ТД «Неман»</div>
       </a>
