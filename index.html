@@ -43,6 +43,9 @@
   "telephone": "+375154659775",
   "email": "info@lida-servis.by",
   "foundingDate": "1997",
+  "sameAs": [
+    "https://instagram.com/li_da_servis"
+  ],
   "description": "Лизинговая компания. Финансовый, возвратный и оперативный лизинг автомобилей, спецтехники, оборудования и недвижимости."
 }
 </script>
@@ -174,7 +177,7 @@ a{text-decoration:none;color:inherit}
 .step-title{font-size:18px;font-weight:700;color:var(--primary);margin-bottom:12px}
 .step-desc{font-size:14px;color:var(--text-light);line-height:1.6}
 
-/* CONDITIONS - на темном фоне */
+/* CONDITIONS */
 .cond-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .cond-card{background:var(--white);border-radius:16px;padding:32px 24px;text-align:center;box-shadow:var(--shadow);border-top:4px solid var(--accent)}
 .cond-value{font-size:42px;font-weight:800;color:var(--primary);line-height:1;margin-bottom:8px}
@@ -204,7 +207,7 @@ a{text-decoration:none;color:inherit}
 .doc-check{width:28px;height:28px;min-width:28px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:14px;font-weight:700}
 .doc-text{font-size:15px;line-height:1.6}
 
-/* FAQ - светлая секция */
+/* FAQ */
 .faq-list{max-width:900px;margin:0 auto}
 .faq-item{background:var(--white);border-radius:12px;margin-bottom:12px;box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--border)}
 .faq-q{padding:20px 24px;font-weight:600;font-size:16px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--primary);transition:background .2s}
@@ -218,7 +221,7 @@ a{text-decoration:none;color:inherit}
 .faq-a li{position:relative;padding-left:20px;margin-bottom:6px;font-size:14px;color:var(--text-light);line-height:1.6}
 .faq-a li::before{content:'';position:absolute;left:0;top:8px;width:8px;height:8px;background:var(--accent);border-radius:50%}
 
-/* ABOUT - С ФОНОВОЙ КАРТИНКОЙ */
+/* ABOUT */
 .about-section{
   position:relative;
   padding:100px 0;
@@ -241,7 +244,7 @@ a{text-decoration:none;color:inherit}
 .about-stat-value{font-size:36px;font-weight:800;color:var(--accent);margin-bottom:4px}
 .about-stat-label{font-size:13px;color:rgba(255,255,255,0.85)}
 
-/* PARTNERS - на темном фоне */
+/* PARTNERS */
 .partners-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;max-width:800px;margin:0 auto}
 .partner-card{background:var(--white);border-radius:16px;padding:40px 32px;text-align:center;box-shadow:var(--shadow);transition:all .3s;cursor:pointer;display:block}
 .partner-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
@@ -266,6 +269,8 @@ a{text-decoration:none;color:inherit}
 .contact-info{display:flex;flex-direction:column;gap:24px}
 .contact-item{display:flex;gap:20px;align-items:flex-start}
 .contact-icon{width:56px;height:56px;min-width:56px;background:var(--primary);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:22px}
+.contact-icon.viber{background:#7360f2}
+.contact-icon.instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
 .contact-label{font-size:13px;color:var(--text-light);margin-bottom:4px}
 .contact-value{font-size:16px;font-weight:600;color:var(--primary)}
 .contact-value a{color:var(--primary);transition:color .2s}
@@ -345,6 +350,8 @@ a{text-decoration:none;color:inherit}
 .footer-links a:hover{opacity:1;color:var(--accent);padding-left:4px}
 .footer-contact{font-size:14px;opacity:0.8;margin-bottom:12px;display:flex;gap:10px;align-items:flex-start}
 .footer-contact i{color:var(--accent);margin-top:3px;min-width:16px}
+.footer-contact a{color:var(--white);transition:color .2s}
+.footer-contact a:hover{color:var(--accent)}
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
 .footer-copy{font-size:13px;opacity:0.6}
 .footer-social{display:flex;gap:12px}
@@ -682,7 +689,7 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- CONDITIONS - ТЕМНЫЙ ФОН -->
+<!-- CONDITIONS -->
 <section class="section section-dark" id="conditions">
   <div class="container">
     <div class="section-header">
@@ -719,7 +726,7 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- DOCS & FAQ - ТЕМНЫЙ ФОН С ДОКУМЕНТАМИ, СВЕТЛЫЙ С FAQ -->
+<!-- DOCS -->
 <section class="section section-dark" id="docs">
   <div class="container">
     <div class="section-header">
@@ -736,7 +743,7 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- FAQ - СВЕТЛЫЙ ФОН -->
+<!-- FAQ -->
 <section class="section section-light">
   <div class="container">
     <div class="section-header">
@@ -787,7 +794,7 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- ABOUT - С ФОНОВОЙ КАРТИНКОЙ -->
+<!-- ABOUT -->
 <section class="about-section" id="about">
   <div class="container">
     <div class="about-grid">
@@ -820,7 +827,7 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- PARTNERS - ТЕМНЫЙ ФОН -->
+<!-- PARTNERS -->
 <section class="section section-dark">
   <div class="container">
     <div class="section-header">
@@ -989,6 +996,24 @@ a{text-decoration:none;color:inherit}
           </div>
         </div>
         <div class="contact-item">
+          <div class="contact-icon viber"><i class="fab fa-viber"></i></div>
+          <div>
+            <div class="contact-label">Viber</div>
+            <div class="contact-value">
+              <a href="viber://chat?number=+37529644680">+375 (29) 644-46-80</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon instagram"><i class="fab fa-instagram"></i></div>
+          <div>
+            <div class="contact-label">Instagram</div>
+            <div class="contact-value">
+              <a href="https://instagram.com/li_da_servis" target="_blank" rel="noopener">@li_da_servis</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-item">
           <div class="contact-icon"><i class="fas fa-envelope"></i></div>
           <div>
             <div class="contact-label">E-mail</div>
@@ -1052,6 +1077,8 @@ a{text-decoration:none;color:inherit}
         <div class="footer-contact"><i class="fas fa-phone"></i><a href="tel:+375154659775">8 (0154) 65-97-75</a></div>
         <div class="footer-contact"><i class="fas fa-phone"></i><a href="tel:+375154659774">8 (0154) 65-97-74</a></div>
         <div class="footer-contact"><i class="fas fa-mobile-alt"></i><a href="tel:+375291301979">8 (029) 130-19-79</a></div>
+        <div class="footer-contact"><i class="fab fa-viber"></i><a href="viber://chat?number=+37529644680">Viber: +375 (29) 644-46-80</a></div>
+        <div class="footer-contact"><i class="fab fa-instagram"></i><a href="https://instagram.com/li_da_servis" target="_blank" rel="noopener">@li_da_servis</a></div>
         <div class="footer-contact"><i class="fas fa-clock"></i><span>Пн–Пт: 8:00 – 17:00<br>Обед: 13:00 – 14:00</span></div>
         <div class="footer-contact"><i class="fas fa-envelope"></i><a href="mailto:info@lida-servis.by">info@lida-servis.by</a></div>
       </div>
@@ -1071,7 +1098,8 @@ a{text-decoration:none;color:inherit}
         <div class="footer-social">
           <a href="#" aria-label="VK"><i class="fab fa-vk"></i></a>
           <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://instagram.com/li_da_servis" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="viber://chat?number=+37529644680" aria-label="Viber"><i class="fab fa-viber"></i></a>
           <a href="mailto:info@lida-servis.by" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
@@ -1184,7 +1212,6 @@ a{text-decoration:none;color:inherit}
 <button class="scroll-top" id="scrollTop" aria-label="Наверх"><i class="fas fa-arrow-up"></i></button>
 
 <script>
-// Calculator
 const calcPrice=document.getElementById('calcPrice');
 const calcAdv=document.getElementById('calcAdv');
 const calcTerm=document.getElementById('calcTerm');
@@ -1214,7 +1241,6 @@ calcAdv.addEventListener('input',calculate);
 calcTerm.addEventListener('input',calculate);
 calculate();
 
-// Docs tabs
 const docs={
   legal:['Уставные документы (копия)','Свидетельство о государственной регистрации','Свидетельство о постановке на учёт в налоговом органе','Бухгалтерская отчётность за последний отчётный период','Финансовая отчётность за последние 12 месяцев','Документы, подтверждающие полномочия руководителя','Карточка предприятия с банковскими реквизитами','Бизнес-план или обоснование необходимости приобретения имущества','Документы на приобретаемое имущество (коммерческое предложение, счёт)'],
   ip:['Паспорт индивидуального предпринимателя','Свидетельство о государственной регистрации ИП','Свидетельство о постановке на учёт в налоговом органе','Налоговая декларация за последний отчётный период','Выписка из банка о движении средств по счетам за 6 месяцев','Документы, подтверждающие доходы','Карточка предприятия с банковскими реквизитами','Документы на приобретаемое имущество'],
@@ -1235,7 +1261,6 @@ document.querySelectorAll('.doc-tab').forEach(tab=>{
   });
 });
 
-// FAQ
 document.querySelectorAll('.faq-item').forEach(item=>{
   item.querySelector('.faq-q').addEventListener('click',()=>{
     const wasOpen=item.classList.contains('open');
@@ -1244,14 +1269,12 @@ document.querySelectorAll('.faq-item').forEach(item=>{
   });
 });
 
-// Form
 document.getElementById('leadForm').addEventListener('submit',e=>{
   e.preventDefault();
   document.getElementById('formContent').style.display='none';
   document.getElementById('formSuccess').style.display='block';
 });
 
-// Burger
 const burger=document.getElementById('burger');
 const mobileNav=document.getElementById('mobileNav');
 burger.addEventListener('click',()=>{
@@ -1259,7 +1282,6 @@ burger.addEventListener('click',()=>{
 });
 mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileNav.classList.remove('open')));
 
-// Scroll top
 const scrollTopBtn=document.getElementById('scrollTop');
 window.addEventListener('scroll',()=>{
   if(window.scrollY>400)scrollTopBtn.classList.add('visible');
@@ -1267,14 +1289,12 @@ window.addEventListener('scroll',()=>{
 });
 scrollTopBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 
-// Header shadow
 const header=document.getElementById('header');
 window.addEventListener('scroll',()=>{
   if(window.scrollY>20)header.style.boxShadow='0 2px 20px rgba(0,0,0,0.1)';
   else header.style.boxShadow='0 2px 10px rgba(0,0,0,0.05)';
 });
 
-// Active nav link
 const sections=document.querySelectorAll('section[id]');
 const navLinks=document.querySelectorAll('.nav a');
 window.addEventListener('scroll',()=>{
@@ -1289,7 +1309,6 @@ window.addEventListener('scroll',()=>{
   });
 });
 
-// COOKIE BANNER
 const cookieBanner=document.getElementById('cookieBanner');
 const cookieAccept=document.getElementById('cookieAccept');
 const cookieDecline=document.getElementById('cookieDecline');
@@ -1315,7 +1334,6 @@ cookieDecline.addEventListener('click',()=>{
 
 showCookieBanner();
 
-// PRIVACY MODAL
 const privacyModal=document.getElementById('privacyModal');
 
 function openPrivacyModal(){
