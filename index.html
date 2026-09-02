@@ -138,7 +138,7 @@ a{text-decoration:none;color:inherit}
 .section-dark .section-subtitle{color:rgba(255,255,255,0.7)}
 .section-line{width:60px;height:4px;background:var(--accent);margin:20px auto 0;border-radius:2px}
 
-/* LEASING TYPES - ИСПРАВЛЕННЫЕ ПИКТОГРАММЫ */
+/* LEASING TYPES */
 .types-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .type-card{background:var(--white);border-radius:16px;box-shadow:var(--shadow);transition:all .3s;cursor:pointer;position:relative;overflow:visible}
 .type-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
@@ -204,35 +204,42 @@ a{text-decoration:none;color:inherit}
 .doc-check{width:28px;height:28px;min-width:28px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:14px;font-weight:700}
 .doc-text{font-size:15px;line-height:1.6}
 
-/* FAQ */
+/* FAQ - светлая секция */
 .faq-list{max-width:900px;margin:0 auto}
-.faq-item{background:var(--white);border-radius:12px;margin-bottom:12px;box-shadow:var(--shadow);overflow:hidden}
-.section-dark .faq-item{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);box-shadow:none}
+.faq-item{background:var(--white);border-radius:12px;margin-bottom:12px;box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--border)}
 .faq-q{padding:20px 24px;font-weight:600;font-size:16px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--primary);transition:background .2s}
-.section-dark .faq-q{color:var(--white)}
 .faq-q:hover{background:var(--bg-light)}
-.section-dark .faq-q:hover{background:rgba(255,255,255,0.1)}
 .faq-q i{transition:transform .3s;color:var(--accent)}
 .faq-item.open .faq-q i{transform:rotate(180deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .3s,padding .3s}
 .faq-item.open .faq-a{max-height:500px;padding:0 24px 20px}
 .faq-a p{font-size:14px;color:var(--text-light);line-height:1.7}
-.section-dark .faq-a p{color:rgba(255,255,255,0.7)}
 .faq-a ul{list-style:none;padding:0;margin:8px 0}
 .faq-a li{position:relative;padding-left:20px;margin-bottom:6px;font-size:14px;color:var(--text-light);line-height:1.6}
-.section-dark .faq-a li{color:rgba(255,255,255,0.7)}
 .faq-a li::before{content:'';position:absolute;left:0;top:8px;width:8px;height:8px;background:var(--accent);border-radius:50%}
 
-/* ABOUT */
+/* ABOUT - С ФОНОВОЙ КАРТИНКОЙ */
+.about-section{
+  position:relative;
+  padding:100px 0;
+  background:url('img/about-back.png') center/cover no-repeat;
+  overflow:hidden;
+  color:var(--white);
+}
+.about-section::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to right,rgba(19,43,79,0.92) 0%,rgba(19,43,79,0.85) 50%,rgba(19,43,79,0.6) 100%);
+}
+.about-section .container{position:relative;z-index:1}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.about-text h2{font-size:36px;font-weight:800;color:var(--primary);margin-bottom:24px;line-height:1.2}
-.about-text p{font-size:15px;color:var(--text-light);margin-bottom:16px;line-height:1.7}
+.about-text h2{font-size:36px;font-weight:800;color:var(--white);margin-bottom:24px;line-height:1.2}
+.about-text p{font-size:15px;color:rgba(255,255,255,0.9);margin-bottom:16px;line-height:1.7}
 .about-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:32px}
-.about-stat{background:var(--bg-light);border-radius:12px;padding:24px;text-align:center}
-.about-stat-value{font-size:36px;font-weight:800;color:var(--primary);margin-bottom:4px}
-.about-stat-label{font-size:13px;color:var(--text-light)}
-.about-img{border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);background:var(--bg-light);display:flex;align-items:center;justify-content:center}
-.about-img img{width:100%;height:auto;max-height:560px;object-fit:contain;object-position:top center}
+.about-stat{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:24px;text-align:center;backdrop-filter:blur(4px)}
+.about-stat-value{font-size:36px;font-weight:800;color:var(--accent);margin-bottom:4px}
+.about-stat-label{font-size:13px;color:rgba(255,255,255,0.85)}
 
 /* PARTNERS - на темном фоне */
 .partners-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;max-width:800px;margin:0 auto}
@@ -288,7 +295,7 @@ a{text-decoration:none;color:inherit}
 .form-success h3{font-size:22px;font-weight:700;color:var(--primary);margin-bottom:8px}
 .form-success p{color:var(--text-light)}
 
-/* CTA - ТЕКСТ НА ФОНЕ КАРТИНКИ */
+/* CTA */
 .cta-section{
   position:relative;
   padding:100px 0;
@@ -409,6 +416,7 @@ a{text-decoration:none;color:inherit}
   .steps-grid{grid-template-columns:1fr}
   .steps-grid::before{display:none}
   .cta-content h2{font-size:36px}
+  .about-section{padding:80px 0}
 }
 @media(max-width:768px){
   .nav,.header-phone,.header-btn{display:none}
@@ -432,6 +440,9 @@ a{text-decoration:none;color:inherit}
   .cta-section{padding:60px 0}
   .cta-content h2{font-size:28px}
   .cta-content p{font-size:15px}
+  .about-section{padding:60px 0}
+  .about-section::before{background:rgba(19,43,79,0.88)}
+  .about-text h2{font-size:28px}
 }
 @media(max-width:480px){
   .cta-content h2{font-size:24px}
@@ -708,7 +719,7 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- DOCS & FAQ - ТЕМНЫЙ ФОН -->
+<!-- DOCS & FAQ - ТЕМНЫЙ ФОН С ДОКУМЕНТАМИ, СВЕТЛЫЙ С FAQ -->
 <section class="section section-dark" id="docs">
   <div class="container">
     <div class="section-header">
@@ -722,54 +733,62 @@ a{text-decoration:none;color:inherit}
       <button class="doc-tab" data-tab="phys">Физические лица</button>
     </div>
     <div class="doc-list" id="docList"></div>
-    <div style="margin-top:60px">
-      <h3 style="font-size:24px;font-weight:700;color:var(--white);text-align:center;margin-bottom:32px">Часто задаваемые вопросы</h3>
-      <div class="faq-list">
-        <div class="faq-item">
-          <div class="faq-q">Что такое лизинг и чем он отличается от кредита? <i class="fas fa-chevron-down"></i></div>
-          <div class="faq-a"><p>Лизинг — это форма финансирования, при которой лизинговая компания приобретает имущество и передаёт его клиенту во временное пользование с правом выкупа. В отличие от кредита, лизинг позволяет получить налоговые преимущества, не требует залога (имущество является предметом лизинга) и часто оформляется быстрее.</p></div>
+  </div>
+</section>
+
+<!-- FAQ - СВЕТЛЫЙ ФОН -->
+<section class="section section-light">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Часто задаваемые вопросы</h2>
+      <p class="section-subtitle">Ответы на самые популярные вопросы о лизинге</p>
+      <div class="section-line"></div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Что такое лизинг и чем он отличается от кредита? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a"><p>Лизинг — это форма финансирования, при которой лизинговая компания приобретает имущество и передаёт его клиенту во временное пользование с правом выкупа. В отличие от кредита, лизинг позволяет получить налоговые преимущества, не требует залога (имущество является предметом лизинга) и часто оформляется быстрее.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Какие преимущества имеет лизинг перед кредитом? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">
+          <p>Лизинг обладает рядом существенных преимуществ по сравнению с банковским кредитованием:</p>
+          <ul>
+            <li><strong>Налоговые льготы</strong> — лизинговые платежи полностью относятся на расходы организации, что снижает налогооблагаемую базу по налогу на прибыль и НДС</li>
+            <li><strong>Отсутствие залога</strong> — предмет лизинга сам является обеспечением сделки, не требуется дополнительное имущество в залог</li>
+            <li><strong>Быстрое оформление</strong> — решение по заявке принимается в течение 1–3 рабочих дней, что значительно быстрее банковского кредитования</li>
+            <li><strong>Гибкие условия</strong> — индивидуальный график платежей, возможность досрочного выкупа, изменение сроков и размера аванса</li>
+            <li><strong>Сохранение оборотных средств</strong> — не требуется единовременная крупная оплата, что позволяет направить средства на развитие бизнеса</li>
+            <li><strong>Обновление техники</strong> — возможность регулярно обновлять парк автомобилей и оборудования без значительных капитальных вложений</li>
+            <li><strong>Минимальный аванс</strong> — от 20% стоимости имущества, тогда как по кредиту часто требуется 30–50%</li>
+            <li><strong>Не увеличивает долговую нагрузку</strong> — при оперативном лизинге имущество не отражается на балансе лизингополучателя</li>
+            <li><strong>Сервисное обслуживание</strong> — возможность включить страхование, ТО и ремонт в лизинговые платежи</li>
+            <li><strong>Доступность для малого бизнеса</strong> — упрощённые требования к заёмщику по сравнению с банковским кредитом</li>
+          </ul>
         </div>
-        <div class="faq-item">
-          <div class="faq-q">Какие преимущества имеет лизинг перед кредитом? <i class="fas fa-chevron-down"></i></div>
-          <div class="faq-a">
-            <p>Лизинг обладает рядом существенных преимуществ по сравнению с банковским кредитованием:</p>
-            <ul>
-              <li><strong>Налоговые льготы</strong> — лизинговые платежи полностью относятся на расходы организации, что снижает налогооблагаемую базу по налогу на прибыль и НДС</li>
-              <li><strong>Отсутствие залога</strong> — предмет лизинга сам является обеспечением сделки, не требуется дополнительное имущество в залог</li>
-              <li><strong>Быстрое оформление</strong> — решение по заявке принимается в течение 1–3 рабочих дней, что значительно быстрее банковского кредитования</li>
-              <li><strong>Гибкие условия</strong> — индивидуальный график платежей, возможность досрочного выкупа, изменение сроков и размера аванса</li>
-              <li><strong>Сохранение оборотных средств</strong> — не требуется единовременная крупная оплата, что позволяет направить средства на развитие бизнеса</li>
-              <li><strong>Обновление техники</strong> — возможность регулярно обновлять парк автомобилей и оборудования без значительных капитальных вложений</li>
-              <li><strong>Минимальный аванс</strong> — от 20% стоимости имущества, тогда как по кредиту часто требуется 30–50%</li>
-              <li><strong>Не увеличивает долговую нагрузку</strong> — при оперативном лизинге имущество не отражается на балансе лизингополучателя</li>
-              <li><strong>Сервисное обслуживание</strong> — возможность включить страхование, ТО и ремонт в лизинговые платежи</li>
-              <li><strong>Доступность для малого бизнеса</strong> — упрощённые требования к заёмщику по сравнению с банковским кредитом</li>
-            </ul>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Какие виды лизинга вы предлагаете? <i class="fas fa-chevron-down"></i></div>
-          <div class="faq-a"><p>Мы предлагаем финансовый лизинг (с полным выкупом имущества по окончании срока), оперативный лизинг (с возможностью возврата имущества) и возвратный лизинг (клиент продаёт своё имущество лизинговой компании и берёт его в аренду).</p></div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Можно ли взять в лизинг б/у технику? <i class="fas fa-chevron-down"></i></div>
-          <div class="faq-a"><p>Да, мы рассматриваем лизинг подержанной техники и оборудования. Условия зависят от возраста, состояния и ликвидности имущества. Свяжитесь с нами для индивидуального расчёта.</p></div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Как быстро рассматривается заявка? <i class="fas fa-chevron-down"></i></div>
-          <div class="faq-a"><p>Предварительное решение по заявке принимается в течение 1–3 рабочих дней после получения полного пакета документов. Окончательное оформление сделки занимает от 5 до 10 рабочих дней.</p></div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">В какой валюте осуществляется финансирование? <i class="fas fa-chevron-down"></i></div>
-          <div class="faq-a"><p>Финансирование осуществляется в белорусских рублях (BYN). Мы также работаем с партнёрскими банками, что позволяет предлагать конкурентные условия.</p></div>
-        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Какие виды лизинга вы предлагаете? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a"><p>Мы предлагаем финансовый лизинг (с полным выкупом имущества по окончании срока), оперативный лизинг (с возможностью возврата имущества) и возвратный лизинг (клиент продаёт своё имущество лизинговой компании и берёт его в аренду).</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Можно ли взять в лизинг б/у технику? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a"><p>Да, мы рассматриваем лизинг подержанной техники и оборудования. Условия зависят от возраста, состояния и ликвидности имущества. Свяжитесь с нами для индивидуального расчёта.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Как быстро рассматривается заявка? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a"><p>Предварительное решение по заявке принимается в течение 1–3 рабочих дней после получения полного пакета документов. Окончательное оформление сделки занимает от 5 до 10 рабочих дней.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">В какой валюте осуществляется финансирование? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a"><p>Финансирование осуществляется в белорусских рублях (BYN). Мы также работаем с партнёрскими банками, что позволяет предлагать конкурентные условия.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="section" id="about">
+<!-- ABOUT - С ФОНОВОЙ КАРТИНКОЙ -->
+<section class="about-section" id="about">
   <div class="container">
     <div class="about-grid">
       <div class="about-text">
@@ -796,9 +815,7 @@ a{text-decoration:none;color:inherit}
           </div>
         </div>
       </div>
-      <div class="about-img">
-        <img src="img/about.png" alt="Представитель компании Лида-Сервис">
-      </div>
+      <div></div>
     </div>
   </div>
 </section>
@@ -871,7 +888,7 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- CTA - ТЕКСТ НА ФОНЕ КАРТИНКИ -->
+<!-- CTA -->
 <section class="cta-section">
   <div class="cta-inner">
     <div class="cta-content">
